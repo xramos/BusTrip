@@ -10,13 +10,13 @@ import Foundation
 
 final class StopMock {
     
-    let id = "1"
+    let id = 1
     let latitude = 41.38074
     let longitude = 2.18594
     
     // MARK: - Stop
     
-    func generateStop(id: String? = nil,
+    func generateStop(id: Int? = nil,
                       latitude: Double? = nil,
                       longitude: Double? = nil) -> Stop {
         
@@ -27,7 +27,7 @@ final class StopMock {
     
     // MARK: - ServerStop
     
-    func generateServerStop(id: String? = nil,
+    func generateServerStop(id: Int? = nil,
                             latitude: Double? = nil,
                             longitude: Double? = nil) -> ServerStop {
      

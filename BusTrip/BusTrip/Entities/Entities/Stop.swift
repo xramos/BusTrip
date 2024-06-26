@@ -9,7 +9,7 @@ import Foundation
 
 struct Stop {
     
-    let id: String
+    let id: Int
     let lat: Double
     let lon: Double
 }

@@ -23,7 +23,9 @@ struct ServerTrip: Codable {
     func convertToEntity() -> Trip {
         
         var tripStops: [Stop] = []
-        for stop in stops {
+        
+        for stop in stops where stop.id != nil && stop.point?._latitude != nil && stop.point?._longitude != nil {
+                
             tripStops.append(stop.convertToEntity())
         }
         

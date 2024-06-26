@@ -13,7 +13,7 @@ final class ServerStopUnitTests: XCTestCase {
     func testInit() {
         
         // Given
-        let id = "1"
+        let id = 1
         let latitude = 2.2
         let longitude = 4.2331
         
@@ -25,7 +25,7 @@ final class ServerStopUnitTests: XCTestCase {
         // Then
         XCTAssertNotNil(response)
         XCTAssertEqual(response.id, id)
-        XCTAssertEqual(response.point._latitude, latitude)
-        XCTAssertEqual(response.point._longitude, longitude)
+        XCTAssertEqual(response.point!._latitude, latitude)
+        XCTAssertEqual(response.point!._longitude, longitude)
     }
 }

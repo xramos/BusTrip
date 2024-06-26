@@ -13,7 +13,7 @@ final class StopUnitTests: XCTestCase {
     func testInit() {
         
         // Given
-        let id = "1"
+        let id = 1
         let latitude = 2.2
         let longitude = 4.2331
         

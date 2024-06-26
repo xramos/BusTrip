@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Trip {
+struct Trip: Identifiable {
+
+    var id: String = UUID().uuidString
     
     let route: String
     let driverName: String

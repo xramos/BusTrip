@@ -9,13 +9,13 @@ import Foundation
 
 struct ServerStop: Codable {
     
-    let id: String
-    let point: ServerPoint
+    let id: Int?
+    let point: ServerPoint?
     
     func convertToEntity() -> Stop {
         
-        return Stop(id: id,
-                    lat: point._latitude,
-                    lon: point._longitude)
+        return Stop(id: id ?? 0,
+                    lat: point?._latitude ?? 0,
+                    lon: point?._longitude ?? 0)
     }
 }
