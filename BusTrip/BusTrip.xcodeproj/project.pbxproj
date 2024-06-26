@@ -52,6 +52,7 @@
 		DAADE9E62C2C5D7000B1FA5B /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9E52C2C5D7000B1FA5B /* TripListViewModel.swift */; };
 		DAADE9EA2C2C6A2B00B1FA5B /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9E92C2C6A2B00B1FA5B /* TripCardView.swift */; };
 		DAADE9ED2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9EC2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift */; };
+		DAADE9EF2C2CB86F00B1FA5B /* RoundedCornerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		DAADE9E52C2C5D7000B1FA5B /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
 		DAADE9E92C2C6A2B00B1FA5B /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		DAADE9EC2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+BusTrip.swift"; sourceTree = "<group>"; };
+		DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 			children = (
 				DAADE9E12C2C592100B1FA5B /* AppBackground.swift */,
 				DAADE9E92C2C6A2B00B1FA5B /* TripCardView.swift */,
+				DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				DAADE9E42C2C594F00B1FA5B /* PreviewView.swift in Sources */,
 				DAADE9C52C2C282600B1FA5B /* NetworkError.swift in Sources */,
 				DAADE9982C2C018E00B1FA5B /* Address.swift in Sources */,
+				DAADE9EF2C2CB86F00B1FA5B /* RoundedCornerShape.swift in Sources */,
 				DAADE9622C2B276B00B1FA5B /* BusTrip.xcdatamodeld in Sources */,
 				DAADE9902C2BFC4000B1FA5B /* ServerTrip.swift in Sources */,
 				DAADE95D2C2B276B00B1FA5B /* BusTripApp.swift in Sources */,

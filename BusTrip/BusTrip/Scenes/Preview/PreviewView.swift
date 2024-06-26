@@ -17,7 +17,7 @@ struct PreviewView: View {
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 200)
+                    .frame(width: Constants.previewIconHeight)
             }
             
         }.appBackground()

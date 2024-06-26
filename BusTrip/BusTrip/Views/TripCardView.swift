@@ -46,7 +46,6 @@ struct TripCardView: View {
             .background(Color.surface)
                    .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous))
         }
-        .padding(.bottom, Constants.padding)
     }
 }
 

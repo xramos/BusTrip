@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct TripListView: View {
     
@@ -19,9 +20,7 @@ struct TripListView: View {
                 
                 content
             }
-            .padding(Constants.padding)
         }
-        .appBackground()
         .task {
             
             viewModel.getTrips()
@@ -75,8 +74,19 @@ extension TripListView {
     @ViewBuilder
     var loadedView: some View {
         
-        // TODO
-        tripsView
+        ZStack {
+            
+            Map {
+                
+                // TODO: Add Marker and Annotations on task 2
+                
+            }.ignoresSafeArea()
+                .overlay(alignment: .bottom, content: {
+                    
+                    tripsView
+                })
+                .ignoresSafeArea(edges: .bottom)
+        }
     }
     
     @ViewBuilder
@@ -92,13 +102,31 @@ extension TripListView {
     @ViewBuilder
     var tripsView: some View {
         
-        ScrollView {
+        VStack {
             
-            ForEach(viewModel.trips) { trip in
+            List {
                 
-                TripCardView(trip: trip)
+                VStack(alignment: .leading) {
+                    
+                    ForEach(viewModel.trips) { trip in
+                        
+                        TripCardView(trip: trip)
+                    }
+                }
+                .padding([.top, .leading, .trailing], Constants.padding)
+                .padding(.bottom, Constants.paddingXL)
+                .listRowSeparatorTint(.clear)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets())
             }
+            .scrollContentBackground(.hidden)
+            .listStyle(PlainListStyle())
         }
+        .frame(height: Constants.tripListHeight)
+        .background(
+            RoundedCornersShape(radius: Constants.borderRadius, corners: [.topLeft, .topRight])
+                .fill(Color.primaryBackground)
+        )
     }
 }
 
