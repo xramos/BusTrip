@@ -34,6 +34,18 @@
 		DAADE9B72C2C1B0A00B1FA5B /* AddressUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9B62C2C1B0A00B1FA5B /* AddressUnitTests.swift */; };
 		DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9B82C2C1BA100B1FA5B /* StopUnitTests.swift */; };
 		DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9BA2C2C1C1C00B1FA5B /* TripUnitTests.swift */; };
+		DAADE9BE2C2C25B300B1FA5B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9BD2C2C25B300B1FA5B /* TripRepository.swift */; };
+		DAADE9C02C2C25F500B1FA5B /* RemoteTripDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9BF2C2C25F500B1FA5B /* RemoteTripDataSource.swift */; };
+		DAADE9C32C2C27C100B1FA5B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9C22C2C27C100B1FA5B /* NetworkManager.swift */; };
+		DAADE9C52C2C282600B1FA5B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9C42C2C282600B1FA5B /* NetworkError.swift */; };
+		DAADE9C72C2C288800B1FA5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9C62C2C288800B1FA5B /* Constants.swift */; };
+		DAADE9C92C2C292400B1FA5B /* TripRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9C82C2C292400B1FA5B /* TripRepositoryImplementation.swift */; };
+		DAADE9CB2C2C2A3700B1FA5B /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9CA2C2C2A3700B1FA5B /* URLProtocolMock.swift */; };
+		DAADE9D02C2C2A7C00B1FA5B /* RemoteTripDataSourceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9CF2C2C2A7C00B1FA5B /* RemoteTripDataSourceUnitTests.swift */; };
+		DAADE9D22C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9D12C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift */; };
+		DAADE9D52C2C55FF00B1FA5B /* GetTripsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9D42C2C55FE00B1FA5B /* GetTripsUseCase.swift */; };
+		DAADE9D72C2C565D00B1FA5B /* MockTripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9D62C2C565D00B1FA5B /* MockTripRepository.swift */; };
+		DAADE9DA2C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +97,18 @@
 		DAADE9B62C2C1B0A00B1FA5B /* AddressUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressUnitTests.swift; sourceTree = "<group>"; };
 		DAADE9B82C2C1BA100B1FA5B /* StopUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopUnitTests.swift; sourceTree = "<group>"; };
 		DAADE9BA2C2C1C1C00B1FA5B /* TripUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9BD2C2C25B300B1FA5B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
+		DAADE9BF2C2C25F500B1FA5B /* RemoteTripDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTripDataSource.swift; sourceTree = "<group>"; };
+		DAADE9C22C2C27C100B1FA5B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DAADE9C42C2C282600B1FA5B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DAADE9C62C2C288800B1FA5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DAADE9C82C2C292400B1FA5B /* TripRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepositoryImplementation.swift; sourceTree = "<group>"; };
+		DAADE9CA2C2C2A3700B1FA5B /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		DAADE9CF2C2C2A7C00B1FA5B /* RemoteTripDataSourceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTripDataSourceUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9D12C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepositoryImplementationUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9D42C2C55FE00B1FA5B /* GetTripsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsUseCase.swift; sourceTree = "<group>"; };
+		DAADE9D62C2C565D00B1FA5B /* MockTripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTripRepository.swift; sourceTree = "<group>"; };
+		DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsUseCaseUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +159,9 @@
 		DAADE95B2C2B276B00B1FA5B /* BusTrip */ = {
 			isa = PBXGroup;
 			children = (
+				DAADE9D32C2C55F200B1FA5B /* UseCases */,
+				DAADE9C12C2C27B700B1FA5B /* Network */,
+				DAADE9BC2C2C25A700B1FA5B /* Repositories */,
 				DAADE99D2C2C031900B1FA5B /* Enumerations */,
 				DAADE98C2C2BFC3300B1FA5B /* Entities */,
 				DAADE95C2C2B276B00B1FA5B /* BusTripApp.swift */,
@@ -144,6 +171,7 @@
 				DAADE9672C2B276C00B1FA5B /* BusTrip.entitlements */,
 				DAADE9602C2B276B00B1FA5B /* BusTrip.xcdatamodeld */,
 				DAADE9682C2B276C00B1FA5B /* Preview Content */,
+				DAADE9C62C2C288800B1FA5B /* Constants.swift */,
 			);
 			path = BusTrip;
 			sourceTree = "<group>";
@@ -159,6 +187,8 @@
 		DAADE9722C2B276C00B1FA5B /* BusTripTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAADE9D82C2C56B100B1FA5B /* UseCases */,
+				DAADE9CC2C2C2A4A00B1FA5B /* Repositories */,
 				DAADE9A02C2C05CD00B1FA5B /* Entities */,
 				DAADE9A32C2C05CD00B1FA5B /* Mocks */,
 			);
@@ -208,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADE99E2C2C033200B1FA5B /* Status.swift */,
+				DAADE9C42C2C282600B1FA5B /* NetworkError.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -249,8 +280,53 @@
 				DAADE9A62C2C071100B1FA5B /* StopMock.swift */,
 				DAADE9A82C2C083000B1FA5B /* AddressMock.swift */,
 				DAADE9AA2C2C08F900B1FA5B /* TripMock.swift */,
+				DAADE9CA2C2C2A3700B1FA5B /* URLProtocolMock.swift */,
+				DAADE9D62C2C565D00B1FA5B /* MockTripRepository.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DAADE9BC2C2C25A700B1FA5B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9BD2C2C25B300B1FA5B /* TripRepository.swift */,
+				DAADE9BF2C2C25F500B1FA5B /* RemoteTripDataSource.swift */,
+				DAADE9C82C2C292400B1FA5B /* TripRepositoryImplementation.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DAADE9C12C2C27B700B1FA5B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9C22C2C27C100B1FA5B /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DAADE9CC2C2C2A4A00B1FA5B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9CF2C2C2A7C00B1FA5B /* RemoteTripDataSourceUnitTests.swift */,
+				DAADE9D12C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DAADE9D32C2C55F200B1FA5B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9D42C2C55FE00B1FA5B /* GetTripsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DAADE9D82C2C56B100B1FA5B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,7 +460,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAADE9D52C2C55FF00B1FA5B /* GetTripsUseCase.swift in Sources */,
 				DAADE99C2C2C02B900B1FA5B /* Trip.swift in Sources */,
+				DAADE9C72C2C288800B1FA5B /* Constants.swift in Sources */,
+				DAADE9C52C2C282600B1FA5B /* NetworkError.swift in Sources */,
 				DAADE9982C2C018E00B1FA5B /* Address.swift in Sources */,
 				DAADE9622C2B276B00B1FA5B /* BusTrip.xcdatamodeld in Sources */,
 				DAADE9902C2BFC4000B1FA5B /* ServerTrip.swift in Sources */,
@@ -393,8 +472,12 @@
 				DAADE9922C2BFD6600B1FA5B /* ServerPoint.swift in Sources */,
 				DAADE99A2C2C025D00B1FA5B /* Stop.swift in Sources */,
 				DAADE9642C2B276B00B1FA5B /* ContentView.swift in Sources */,
+				DAADE9C02C2C25F500B1FA5B /* RemoteTripDataSource.swift in Sources */,
+				DAADE9BE2C2C25B300B1FA5B /* TripRepository.swift in Sources */,
 				DAADE95F2C2B276B00B1FA5B /* Persistence.swift in Sources */,
+				DAADE9C32C2C27C100B1FA5B /* NetworkManager.swift in Sources */,
 				DAADE9942C2BFE1F00B1FA5B /* ServerStop.swift in Sources */,
+				DAADE9C92C2C292400B1FA5B /* TripRepositoryImplementation.swift in Sources */,
 				DAADE99F2C2C033200B1FA5B /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,13 +488,18 @@
 			files = (
 				DAADE9B72C2C1B0A00B1FA5B /* AddressUnitTests.swift in Sources */,
 				DAADE9AF2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift in Sources */,
+				DAADE9D22C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift in Sources */,
 				DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */,
 				DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */,
 				DAADE9B12C2C171B00B1FA5B /* ServerPointUnitTests.swift in Sources */,
 				DAADE9A52C2C062600B1FA5B /* PointMock.swift in Sources */,
+				DAADE9DA2C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift in Sources */,
 				DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */,
+				DAADE9CB2C2C2A3700B1FA5B /* URLProtocolMock.swift in Sources */,
 				DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */,
+				DAADE9D72C2C565D00B1FA5B /* MockTripRepository.swift in Sources */,
 				DAADE9B52C2C192900B1FA5B /* ServerTripUnitTests.swift in Sources */,
+				DAADE9D02C2C2A7C00B1FA5B /* RemoteTripDataSourceUnitTests.swift in Sources */,
 				DAADE9AB2C2C08F900B1FA5B /* TripMock.swift in Sources */,
 				DAADE9A72C2C071100B1FA5B /* StopMock.swift in Sources */,
 			);
