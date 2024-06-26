@@ -13,9 +13,27 @@
 		DAADE9642C2B276B00B1FA5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9632C2B276B00B1FA5B /* ContentView.swift */; };
 		DAADE9662C2B276C00B1FA5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAADE9652C2B276C00B1FA5B /* Assets.xcassets */; };
 		DAADE96A2C2B276C00B1FA5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAADE9692C2B276C00B1FA5B /* Preview Assets.xcassets */; };
-		DAADE9742C2B276C00B1FA5B /* BusTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9732C2B276C00B1FA5B /* BusTripTests.swift */; };
 		DAADE97E2C2B276C00B1FA5B /* BusTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE97D2C2B276C00B1FA5B /* BusTripUITests.swift */; };
 		DAADE9802C2B276C00B1FA5B /* BusTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE97F2C2B276C00B1FA5B /* BusTripUITestsLaunchTests.swift */; };
+		DAADE9902C2BFC4000B1FA5B /* ServerTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE98F2C2BFC4000B1FA5B /* ServerTrip.swift */; };
+		DAADE9922C2BFD6600B1FA5B /* ServerPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9912C2BFD6600B1FA5B /* ServerPoint.swift */; };
+		DAADE9942C2BFE1F00B1FA5B /* ServerStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9932C2BFE1F00B1FA5B /* ServerStop.swift */; };
+		DAADE9962C2BFEA100B1FA5B /* ServerAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9952C2BFEA100B1FA5B /* ServerAddress.swift */; };
+		DAADE9982C2C018E00B1FA5B /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9972C2C018E00B1FA5B /* Address.swift */; };
+		DAADE99A2C2C025D00B1FA5B /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9992C2C025D00B1FA5B /* Stop.swift */; };
+		DAADE99C2C2C02B900B1FA5B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE99B2C2C02B900B1FA5B /* Trip.swift */; };
+		DAADE99F2C2C033200B1FA5B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE99E2C2C033200B1FA5B /* Status.swift */; };
+		DAADE9A52C2C062600B1FA5B /* PointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9A42C2C062600B1FA5B /* PointMock.swift */; };
+		DAADE9A72C2C071100B1FA5B /* StopMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9A62C2C071100B1FA5B /* StopMock.swift */; };
+		DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9A82C2C083000B1FA5B /* AddressMock.swift */; };
+		DAADE9AB2C2C08F900B1FA5B /* TripMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9AA2C2C08F900B1FA5B /* TripMock.swift */; };
+		DAADE9AF2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9AE2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift */; };
+		DAADE9B12C2C171B00B1FA5B /* ServerPointUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9B02C2C171B00B1FA5B /* ServerPointUnitTests.swift */; };
+		DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9B22C2C188A00B1FA5B /* ServerStopUnitTests.swift */; };
+		DAADE9B52C2C192900B1FA5B /* ServerTripUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9B42C2C192900B1FA5B /* ServerTripUnitTests.swift */; };
+		DAADE9B72C2C1B0A00B1FA5B /* AddressUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9B62C2C1B0A00B1FA5B /* AddressUnitTests.swift */; };
+		DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9B82C2C1BA100B1FA5B /* StopUnitTests.swift */; };
+		DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9BA2C2C1C1C00B1FA5B /* TripUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +63,28 @@
 		DAADE9672C2B276C00B1FA5B /* BusTrip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BusTrip.entitlements; sourceTree = "<group>"; };
 		DAADE9692C2B276C00B1FA5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DAADE96F2C2B276C00B1FA5B /* BusTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAADE9732C2B276C00B1FA5B /* BusTripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTripTests.swift; sourceTree = "<group>"; };
 		DAADE9792C2B276C00B1FA5B /* BusTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAADE97D2C2B276C00B1FA5B /* BusTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTripUITests.swift; sourceTree = "<group>"; };
 		DAADE97F2C2B276C00B1FA5B /* BusTripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTripUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAADE98F2C2BFC4000B1FA5B /* ServerTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrip.swift; sourceTree = "<group>"; };
+		DAADE9912C2BFD6600B1FA5B /* ServerPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPoint.swift; sourceTree = "<group>"; };
+		DAADE9932C2BFE1F00B1FA5B /* ServerStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStop.swift; sourceTree = "<group>"; };
+		DAADE9952C2BFEA100B1FA5B /* ServerAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAddress.swift; sourceTree = "<group>"; };
+		DAADE9972C2C018E00B1FA5B /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		DAADE9992C2C025D00B1FA5B /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		DAADE99B2C2C02B900B1FA5B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		DAADE99E2C2C033200B1FA5B /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		DAADE9A42C2C062600B1FA5B /* PointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointMock.swift; sourceTree = "<group>"; };
+		DAADE9A62C2C071100B1FA5B /* StopMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopMock.swift; sourceTree = "<group>"; };
+		DAADE9A82C2C083000B1FA5B /* AddressMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMock.swift; sourceTree = "<group>"; };
+		DAADE9AA2C2C08F900B1FA5B /* TripMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMock.swift; sourceTree = "<group>"; };
+		DAADE9AE2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAddressUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9B02C2C171B00B1FA5B /* ServerPointUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPointUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9B22C2C188A00B1FA5B /* ServerStopUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStopUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9B42C2C192900B1FA5B /* ServerTripUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTripUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9B62C2C1B0A00B1FA5B /* AddressUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9B82C2C1BA100B1FA5B /* StopUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopUnitTests.swift; sourceTree = "<group>"; };
+		DAADE9BA2C2C1C1C00B1FA5B /* TripUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +135,8 @@
 		DAADE95B2C2B276B00B1FA5B /* BusTrip */ = {
 			isa = PBXGroup;
 			children = (
+				DAADE99D2C2C031900B1FA5B /* Enumerations */,
+				DAADE98C2C2BFC3300B1FA5B /* Entities */,
 				DAADE95C2C2B276B00B1FA5B /* BusTripApp.swift */,
 				DAADE95E2C2B276B00B1FA5B /* Persistence.swift */,
 				DAADE9632C2B276B00B1FA5B /* ContentView.swift */,
@@ -121,7 +159,8 @@
 		DAADE9722C2B276C00B1FA5B /* BusTripTests */ = {
 			isa = PBXGroup;
 			children = (
-				DAADE9732C2B276C00B1FA5B /* BusTripTests.swift */,
+				DAADE9A02C2C05CD00B1FA5B /* Entities */,
+				DAADE9A32C2C05CD00B1FA5B /* Mocks */,
 			);
 			path = BusTripTests;
 			sourceTree = "<group>";
@@ -133,6 +172,85 @@
 				DAADE97F2C2B276C00B1FA5B /* BusTripUITestsLaunchTests.swift */,
 			);
 			path = BusTripUITests;
+			sourceTree = "<group>";
+		};
+		DAADE98C2C2BFC3300B1FA5B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE98D2C2BFC3300B1FA5B /* ServerEntities */,
+				DAADE98E2C2BFC3300B1FA5B /* Entities */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DAADE98D2C2BFC3300B1FA5B /* ServerEntities */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE98F2C2BFC4000B1FA5B /* ServerTrip.swift */,
+				DAADE9912C2BFD6600B1FA5B /* ServerPoint.swift */,
+				DAADE9932C2BFE1F00B1FA5B /* ServerStop.swift */,
+				DAADE9952C2BFEA100B1FA5B /* ServerAddress.swift */,
+			);
+			path = ServerEntities;
+			sourceTree = "<group>";
+		};
+		DAADE98E2C2BFC3300B1FA5B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9972C2C018E00B1FA5B /* Address.swift */,
+				DAADE9992C2C025D00B1FA5B /* Stop.swift */,
+				DAADE99B2C2C02B900B1FA5B /* Trip.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DAADE99D2C2C031900B1FA5B /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE99E2C2C033200B1FA5B /* Status.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		DAADE9A02C2C05CD00B1FA5B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9A12C2C05CD00B1FA5B /* ServerEntities */,
+				DAADE9A22C2C05CD00B1FA5B /* Entities */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DAADE9A12C2C05CD00B1FA5B /* ServerEntities */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9AE2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift */,
+				DAADE9B02C2C171B00B1FA5B /* ServerPointUnitTests.swift */,
+				DAADE9B22C2C188A00B1FA5B /* ServerStopUnitTests.swift */,
+				DAADE9B42C2C192900B1FA5B /* ServerTripUnitTests.swift */,
+			);
+			path = ServerEntities;
+			sourceTree = "<group>";
+		};
+		DAADE9A22C2C05CD00B1FA5B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9B62C2C1B0A00B1FA5B /* AddressUnitTests.swift */,
+				DAADE9B82C2C1BA100B1FA5B /* StopUnitTests.swift */,
+				DAADE9BA2C2C1C1C00B1FA5B /* TripUnitTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DAADE9A32C2C05CD00B1FA5B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9A42C2C062600B1FA5B /* PointMock.swift */,
+				DAADE9A62C2C071100B1FA5B /* StopMock.swift */,
+				DAADE9A82C2C083000B1FA5B /* AddressMock.swift */,
+				DAADE9AA2C2C08F900B1FA5B /* TripMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +324,7 @@
 					};
 					DAADE96E2C2B276C00B1FA5B = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = DAADE9582C2B276B00B1FA5B;
 					};
 					DAADE9782C2B276C00B1FA5B = {
@@ -265,10 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAADE99C2C2C02B900B1FA5B /* Trip.swift in Sources */,
+				DAADE9982C2C018E00B1FA5B /* Address.swift in Sources */,
 				DAADE9622C2B276B00B1FA5B /* BusTrip.xcdatamodeld in Sources */,
+				DAADE9902C2BFC4000B1FA5B /* ServerTrip.swift in Sources */,
 				DAADE95D2C2B276B00B1FA5B /* BusTripApp.swift in Sources */,
+				DAADE9962C2BFEA100B1FA5B /* ServerAddress.swift in Sources */,
+				DAADE9922C2BFD6600B1FA5B /* ServerPoint.swift in Sources */,
+				DAADE99A2C2C025D00B1FA5B /* Stop.swift in Sources */,
 				DAADE9642C2B276B00B1FA5B /* ContentView.swift in Sources */,
 				DAADE95F2C2B276B00B1FA5B /* Persistence.swift in Sources */,
+				DAADE9942C2BFE1F00B1FA5B /* ServerStop.swift in Sources */,
+				DAADE99F2C2C033200B1FA5B /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +403,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAADE9742C2B276C00B1FA5B /* BusTripTests.swift in Sources */,
+				DAADE9B72C2C1B0A00B1FA5B /* AddressUnitTests.swift in Sources */,
+				DAADE9AF2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift in Sources */,
+				DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */,
+				DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */,
+				DAADE9B12C2C171B00B1FA5B /* ServerPointUnitTests.swift in Sources */,
+				DAADE9A52C2C062600B1FA5B /* PointMock.swift in Sources */,
+				DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */,
+				DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */,
+				DAADE9B52C2C192900B1FA5B /* ServerTripUnitTests.swift in Sources */,
+				DAADE9AB2C2C08F900B1FA5B /* TripMock.swift in Sources */,
+				DAADE9A72C2C071100B1FA5B /* StopMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +575,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -448,10 +585,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xramos.BusTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -474,8 +612,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -484,10 +622,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xramos.BusTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -496,6 +635,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -507,6 +647,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusTrip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BusTrip";
@@ -518,6 +659,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
