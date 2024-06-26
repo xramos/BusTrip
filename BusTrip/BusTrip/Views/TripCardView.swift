@@ -19,19 +19,26 @@ struct TripCardView: View {
         
         VStack {
             
-            HStack {
+            HStack(alignment: .bottom) {
                 
                 VStack(alignment: .leading) {
                     
                     Text(trip.description)
                         .font(.headline)
                     
-                    Text(trip.driverName)
-                        .font(.subheadline)
+                    HStack {
+                        
+                        Text("ETA:")
+                            .font(.footnote)
+                            .fontWeight(.semibold)
+                        
+                        Text(trip.formatTime(date: trip.endTime) ?? "")
+                            .font(.footnote)
+                    }
                 }
                 
                 Spacer()
-                
+                    
                 Text(trip.status.rawValue)
                     .font(.caption)
             }

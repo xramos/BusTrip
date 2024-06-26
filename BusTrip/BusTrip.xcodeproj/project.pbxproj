@@ -51,6 +51,7 @@
 		DAADE9E42C2C594F00B1FA5B /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9E32C2C594F00B1FA5B /* PreviewView.swift */; };
 		DAADE9E62C2C5D7000B1FA5B /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9E52C2C5D7000B1FA5B /* TripListViewModel.swift */; };
 		DAADE9EA2C2C6A2B00B1FA5B /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9E92C2C6A2B00B1FA5B /* TripCardView.swift */; };
+		DAADE9ED2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9EC2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		DAADE9E32C2C594F00B1FA5B /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		DAADE9E52C2C5D7000B1FA5B /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
 		DAADE9E92C2C6A2B00B1FA5B /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
+		DAADE9EC2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+BusTrip.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		DAADE95B2C2B276B00B1FA5B /* BusTrip */ = {
 			isa = PBXGroup;
 			children = (
+				DAADE9EB2C2C6F4500B1FA5B /* Extensions */,
 				DAADE9E02C2C582D00B1FA5B /* Views */,
 				DAADE9DB2C2C577C00B1FA5B /* Scenes */,
 				DAADE9D32C2C55F200B1FA5B /* UseCases */,
@@ -376,6 +379,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DAADE9EB2C2C6F4500B1FA5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAADE9EC2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,6 +535,7 @@
 				DAADE9C02C2C25F500B1FA5B /* RemoteTripDataSource.swift in Sources */,
 				DAADE9BE2C2C25B300B1FA5B /* TripRepository.swift in Sources */,
 				DAADE95F2C2B276B00B1FA5B /* Persistence.swift in Sources */,
+				DAADE9ED2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift in Sources */,
 				DAADE9EA2C2C6A2B00B1FA5B /* TripCardView.swift in Sources */,
 				DAADE9DE2C2C579C00B1FA5B /* TripListView.swift in Sources */,
 				DAADE9E62C2C5D7000B1FA5B /* TripListViewModel.swift in Sources */,

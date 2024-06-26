@@ -22,3 +22,20 @@ struct Trip: Identifiable {
     let destination: Address
     let stops: [Stop]
 }
+
+extension Trip {
+    
+    func formatTime(date: String) -> String? {
+        
+        var formattedDate: String?
+        
+        let dateFormatter = DateFormatter.iso8601Full
+        let customerFormatter = DateFormatter.shortTotalWithLocale
+        
+        if let dateFormatted = dateFormatter.date(from: date) {
+            formattedDate = customerFormatter.string(from: dateFormatted)
+        }
+        
+        return formattedDate
+    }
+}
