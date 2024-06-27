@@ -76,11 +76,13 @@ extension TripListView {
         
         ZStack {
             
-            Map {
+            Map(interactionModes: [.rotate, .zoom]) {
                 
                 // TODO: Add Marker and Annotations on task 2
                 
-            }.ignoresSafeArea()
+            }
+            .mapStyle(.standard)
+            .ignoresSafeArea()
                 .overlay(alignment: .bottom, content: {
                     
                     tripsView
