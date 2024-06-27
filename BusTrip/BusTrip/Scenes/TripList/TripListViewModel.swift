@@ -66,6 +66,15 @@ class TripListViewModel: ObservableObject {
         
         return decodecCoordinates
     }
+    
+    func getMidCoordinate(trip: Trip) -> CLLocationCoordinate2D {
+        
+        let latitude = (trip.origin.lat + trip.destination.lat) / 2
+        let longitude = (trip.origin.lon + trip.destination.lon) / 2
+        
+        return CLLocationCoordinate2D(latitude: latitude,
+                                      longitude: longitude)
+    }
 }
 
 extension TripListViewModel {

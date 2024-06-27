@@ -14,7 +14,7 @@ struct TripListView: View {
     
     // Init coordinates for Barcelona
     @State private var position = MapCameraPosition.region(
-        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.38074, longitude: 2.18594), span: MKCoordinateSpan(latitudeDelta: 0.6, longitudeDelta: 0.6))
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.38074, longitude: 2.18594), span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
     )
     
     var body: some View {
@@ -89,6 +89,7 @@ extension TripListView {
                     Marker("Origin",
                            systemImage: "bus.fill",
                            coordinate: CLLocationCoordinate2D(latitude: selectedTrip.origin.lat, longitude: selectedTrip.origin.lon))
+                    .tint(Color.surface)
                     
                     ForEach(selectedTrip.stops) { stop in
                         
@@ -97,9 +98,9 @@ extension TripListView {
                             
                             Circle()
                                 .fill(Color.surface)
-                                .frame(width: 20, height: 20)
+                                .frame(width: Constants.iconHeight, height: Constants.iconHeight)
                                 .overlay {
-                                    Image(systemName: "circle.circle")
+                                    Image(systemName: "figure.walk")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                 }
@@ -109,6 +110,7 @@ extension TripListView {
                     Marker("Destination",
                            systemImage: "bus.fill",
                     coordinate: CLLocationCoordinate2D(latitude: selectedTrip.destination.lat, longitude: selectedTrip.destination.lon))
+                    .tint(Color.surface)
                     
                     if let routeCoordinates = viewModel.getTripRoute(trip: selectedTrip) {
                         MapPolyline(MKPolyline(coordinates: routeCoordinates,
@@ -175,9 +177,10 @@ extension TripListView {
     
     func updatePosition(trip: Trip) {
         
-        position = MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: trip.origin.lat,
-                                                                                              longitude: trip.origin.lon),
-                                                               span: MKCoordinateSpan(latitudeDelta: 0.6, longitudeDelta: 0.6)))
+        withAnimation {
+            position = MapCameraPosition.region(MKCoordinateRegion(center: viewModel.getMidCoordinate(trip: trip),
+                                                                   span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)))
+        }
     }
 }
 
