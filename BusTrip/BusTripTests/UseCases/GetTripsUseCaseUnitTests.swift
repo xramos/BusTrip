@@ -31,5 +31,4 @@ final class GetTripsUseCaseUnitTests: XCTestCase {
         // Then
         XCTAssertTrue(repository.isGetTripsCalled)
     }
-
 }

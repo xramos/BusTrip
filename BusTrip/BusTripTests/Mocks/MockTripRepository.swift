@@ -12,6 +12,7 @@ import Combine
 class MockTripRepository: TripRepository {
     
     var isGetTripsCalled: Bool = false
+    var isGetStopDetailCalled: Bool = false
     
     @discardableResult func getTrips() -> AnyPublisher<[Trip], Error> {
         
@@ -19,5 +20,13 @@ class MockTripRepository: TripRepository {
         
         // We don't care about the return result
         return Result.Publisher([]).eraseToAnyPublisher()
+    }
+    
+    @discardableResult func getStopDetail(stopId: Int) -> AnyPublisher<StopDetail, Error> {
+        
+        isGetStopDetailCalled = true
+        
+        // We don't care about the return result
+        return Result.Publisher(NetworkError.invalidResponse).eraseToAnyPublisher()
     }
 }

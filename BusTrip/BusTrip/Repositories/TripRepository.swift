@@ -11,4 +11,6 @@ import Combine
 protocol TripRepository {
     
     func getTrips() -> AnyPublisher<[Trip], Error>
+    
+    func getStopDetail(stopId: Int) -> AnyPublisher<StopDetail, Error>
 }

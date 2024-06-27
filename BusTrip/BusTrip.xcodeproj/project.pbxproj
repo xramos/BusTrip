@@ -59,6 +59,8 @@
 		DAAEEF0E2C2DCEDF00181ECD /* StopDetailMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF0D2C2DCEDF00181ECD /* StopDetailMock.swift */; };
 		DAAEEF122C2DD0CD00181ECD /* StopDetailUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF112C2DD0CD00181ECD /* StopDetailUnitTests.swift */; };
 		DAAEEF142C2DD1C400181ECD /* ServerStopDetailUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF132C2DD1C400181ECD /* ServerStopDetailUnitTests.swift */; };
+		DAAEEF162C2DD6D500181ECD /* GetStopDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF152C2DD6D500181ECD /* GetStopDetailUseCase.swift */; };
+		DAAEEF182C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF172C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		DAAEEF0D2C2DCEDF00181ECD /* StopDetailMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailMock.swift; sourceTree = "<group>"; };
 		DAAEEF112C2DD0CD00181ECD /* StopDetailUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailUnitTests.swift; sourceTree = "<group>"; };
 		DAAEEF132C2DD1C400181ECD /* ServerStopDetailUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStopDetailUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF152C2DD6D500181ECD /* GetStopDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopDetailUseCase.swift; sourceTree = "<group>"; };
+		DAAEEF172C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopDetailUseCaseUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADE9D42C2C55FE00B1FA5B /* GetTripsUseCase.swift */,
+				DAAEEF152C2DD6D500181ECD /* GetStopDetailUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift */,
+				DAAEEF172C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -548,6 +554,7 @@
 				DAADE9922C2BFD6600B1FA5B /* ServerPoint.swift in Sources */,
 				DAADE9E22C2C592100B1FA5B /* AppBackground.swift in Sources */,
 				DAADE99A2C2C025D00B1FA5B /* Stop.swift in Sources */,
+				DAAEEF162C2DD6D500181ECD /* GetStopDetailUseCase.swift in Sources */,
 				DAADE9C02C2C25F500B1FA5B /* RemoteTripDataSource.swift in Sources */,
 				DAADE9BE2C2C25B300B1FA5B /* TripRepository.swift in Sources */,
 				DAADE9ED2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift in Sources */,
@@ -581,6 +588,7 @@
 				DAADE9CB2C2C2A3700B1FA5B /* URLProtocolMock.swift in Sources */,
 				DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */,
 				DAADE9D72C2C565D00B1FA5B /* MockTripRepository.swift in Sources */,
+				DAAEEF182C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift in Sources */,
 				DAADEA052C2D955200B1FA5B /* TripCardViewSnapshotTests.swift in Sources */,
 				DAADE9B52C2C192900B1FA5B /* ServerTripUnitTests.swift in Sources */,
 				DAAEEF122C2DD0CD00181ECD /* StopDetailUnitTests.swift in Sources */,
