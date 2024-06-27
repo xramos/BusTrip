@@ -6,14 +6,11 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct TripCardView: View {
     
-    let trip: Trip
-    
-    init(trip: Trip) {
-        self.trip = trip
-    }
+    var trip: Trip
     
     var body: some View {
         
@@ -28,9 +25,9 @@ struct TripCardView: View {
                     
                     HStack {
                         
-                        Text("ETA:")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
+                        Image(systemName: "calendar.circle")
+                            .frame(height: Constants.iconHeight)
+                            .foregroundColor(Color.secondary)
                         
                         Text(trip.formatTime(date: trip.endTime) ?? "")
                             .font(.footnote)
@@ -39,7 +36,7 @@ struct TripCardView: View {
                 
                 Spacer()
                     
-                Text(trip.status.rawValue)
+                Text(trip.status.displayValue)
                     .font(.caption)
             }
             .padding(Constants.padding)
@@ -49,21 +46,61 @@ struct TripCardView: View {
     }
 }
 
-#Preview {
+// MARK: - Previews
+
+struct TripCardView_ColorScheme_Previews: PreviewProvider {
     
-    let trip = Trip(route: "123",
-                    driverName: "Bruce Wayne",
-                    description: "Visit Gotham",
-                    status: .ongoing,
-                    startTime: "2024-12-18T08:00:00.000Z",
-                    endTime: "2024-12-18T09:00:00.000Z",
-                    origin: Address(address: "Barcelona",
-                                    lat: 43.424,
-                                    lon: 2.33),
-                    destination: Address(address: "Gotham",
-                                         lat: 45.66,
-                                         lon: 3.56),
-                    stops: [])
+    static var previews: some View {
+        
+        let trip = Trip(route: "123",
+                        driverName: "Bruce Wayne",
+                        description: "Visit Gotham",
+                        status: .ongoing,
+                        startTime: "2024-12-18T08:00:00.000Z",
+                        endTime: "2024-12-18T09:00:00.000Z",
+                        origin: Address(address: "Barcelona",
+                                        lat: 43.424,
+                                        lon: 2.33),
+                        destination: Address(address: "Gotham",
+                                             lat: 45.66,
+                                             lon: 3.56),
+                        stops: [])
+        
+        ForEach(ColorScheme.allCases, id: \.self) {
+            TripCardView(trip: trip).preferredColorScheme($0)
+        }
+    }
+}
+
+struct TripCardView_Previews: PreviewProvider {
     
-    return TripCardView(trip: trip)
+    static var previews: some View {
+        
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<Status> {
+        
+        PreviewSnapshots(configurations: [
+            .init(name: "Ongoing", state: .ongoing),
+            .init(name: "Cancelled", state: .cancelled),
+            .init(name: "Scheduled", state: .scheduled),
+            .init(name: "Finalized", state: .finalized)
+        ], configure: { state in
+            
+            TripCardView(trip: Trip(route: "123",
+                                    driverName: "Bruce Wayne",
+                                    description: "Visit Gotham",
+                                    status: state,
+                                    startTime: "2024-12-18T08:00:00.000Z",
+                                    endTime: "2024-12-18T09:00:00.000Z",
+                                    origin: Address(address: "Barcelona",
+                                                    lat: 43.424,
+                                                    lon: 2.33),
+                                    destination: Address(address: "Gotham",
+                                                         lat: 45.66,
+                                                         lon: 3.56),
+                                    stops: []))
+        })
+    }
 }
