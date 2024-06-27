@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct PreviewView: View {
     
@@ -24,11 +25,29 @@ struct PreviewView: View {
     }
 }
 
-struct PreviewView_Previews: PreviewProvider {
+// MARK: - Previews
+
+struct PreviewViewColorScheme_Previews: PreviewProvider {
     
     static var previews: some View {
+        
         ForEach(ColorScheme.allCases, id: \.self) {
             PreviewView().preferredColorScheme($0)
         }
+    }
+}
+
+struct PreviewView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        PreviewSnapshots(configurations: [
+            .init(name: "Default", state: "")
+        ], configure: { _ in
+            PreviewView()
+        })
     }
 }
