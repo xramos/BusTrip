@@ -11,6 +11,7 @@ import PreviewSnapshots
 struct TripCardView: View {
     
     var trip: Trip
+    var isSelected: Bool
     
     var body: some View {
         
@@ -40,7 +41,7 @@ struct TripCardView: View {
                     .font(.caption)
             }
             .padding(Constants.padding)
-            .background(Color.surface)
+            .background(isSelected ? Color.surfaceSelected : Color.surface)
                    .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous))
         }
     }
@@ -67,7 +68,9 @@ struct TripCardView_ColorScheme_Previews: PreviewProvider {
                         stops: [])
         
         ForEach(ColorScheme.allCases, id: \.self) {
-            TripCardView(trip: trip).preferredColorScheme($0)
+            TripCardView(trip: trip, 
+                         isSelected: false)
+            .preferredColorScheme($0)
         }
     }
 }
@@ -100,7 +103,8 @@ struct TripCardView_Previews: PreviewProvider {
                                     destination: Address(address: "Gotham",
                                                          lat: 45.66,
                                                          lon: 3.56),
-                                    stops: []))
+                                    stops: []),
+                         isSelected: false)
         })
     }
 }

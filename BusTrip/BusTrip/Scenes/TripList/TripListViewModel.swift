@@ -8,13 +8,15 @@
 import Foundation
 import SwiftUI
 import Combine
+import Polyline
+import MapKit
 
 class TripListViewModel: ObservableObject {
     
     // Values
     
-    @Published var state = State.idle
-    @Published public private(set) var trips: [Trip] = []
+    @Published var trips: [Trip] = []
+    @Published var selectedTrip: Trip?
     
     // Cancellables
     
@@ -24,33 +26,49 @@ class TripListViewModel: ObservableObject {
     
     func getTrips() {
         
-        state = .loading
-        
         cancellable = GetTripsUseCase().execute()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 
                 switch completion {
                 case .finished:
-                    self.state = .loaded
+                    break
                 case .failure(let error):
-                    self.state = .failed(error.localizedDescription)
+                    print("Error: \(error.localizedDescription)")
                 }
                 
             }, receiveValue: { (trips: [Trip]) in
                 self.trips = trips
+                if let trip = trips.first {
+                    self.setSelectedTrip(trip: trip)
+                }
             })
     }
-}
-
-extension TripListViewModel {
     
-    // State
+    func isSelected(trip: Trip) -> Bool {
+        
+        return trip.id == selectedTrip?.id
+    }
     
-    enum State: Equatable {
-        case idle
-        case loading
-        case failed(String)
-        case loaded
+    func setSelectedTrip(trip: Trip) {
+        
+        selectedTrip = trip
+    }
+    
+    func getTripRoute(trip: Trip) -> [CLLocationCoordinate2D]? {
+        
+        let polyline = Polyline(encodedPolyline: trip.route)
+        let decodecCoordinates: [CLLocationCoordinate2D]? = polyline.coordinates
+        
+        return decodecCoordinates
+    }
+    
+    func getMidCoordinate(trip: Trip) -> CLLocationCoordinate2D {
+        
+        let latitude = (trip.origin.lat + trip.destination.lat) / 2
+        let longitude = (trip.origin.lon + trip.destination.lon) / 2
+        
+        return CLLocationCoordinate2D(latitude: latitude,
+                                      longitude: longitude)
     }
 }

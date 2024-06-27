@@ -12,13 +12,18 @@ struct TripListView: View {
     
     @StateObject var viewModel: TripListViewModel = TripListViewModel()
     
+    // Init coordinates for Barcelona
+    @State private var position = MapCameraPosition.region(
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.38074, longitude: 2.18594), span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
+    )
+    
     var body: some View {
         
         VStack {
             
             VStack {
                 
-                content
+                contentView
             }
         }
         .task {
@@ -31,71 +36,56 @@ struct TripListView: View {
 extension TripListView {
     
     @ViewBuilder
-    var content: some View {
-        
-        switch viewModel.state {
-        case .idle:
-            idleView
-        case .loading:
-            loadingView
-        case .loaded:
-            loadedView
-        case .failed(let error):
-            failedView(error: error)
-        }
-    }
-    
-    @ViewBuilder
-    var idleView: some View {
-        
-        EmptyView()
-    }
-    
-    @ViewBuilder
-    var loadingView: some View {
+    var contentView: some View {
         
         VStack {
             
-            Spacer()
-            
-            HStack {
+            Map(position: $position,
+                interactionModes: [.rotate, .pan, .zoom]) {
                 
-                Spacer()
-                
-                ProgressView()
-                
-                Spacer()
+                if let selectedTrip = viewModel.selectedTrip {
+                    
+                    Marker("Origin",
+                           systemImage: "bus.fill",
+                           coordinate: CLLocationCoordinate2D(latitude: selectedTrip.origin.lat, longitude: selectedTrip.origin.lon))
+                    .tint(Color.surface)
+                    
+                    ForEach(selectedTrip.stops) { stop in
+                        
+                        Annotation("",
+                                   coordinate: CLLocationCoordinate2D(latitude: stop.lat, longitude: stop.lon)) {
+                            
+                            Circle()
+                                .fill(Color.surface)
+                                .frame(width: Constants.iconHeight, height: Constants.iconHeight)
+                                .overlay {
+                                    Image(systemName: "figure.walk")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }
+                        }
+                    }
+                    
+                    Marker("Destination",
+                           systemImage: "bus.fill",
+                    coordinate: CLLocationCoordinate2D(latitude: selectedTrip.destination.lat, longitude: selectedTrip.destination.lon))
+                    .tint(Color.surface)
+                    
+                    if let routeCoordinates = viewModel.getTripRoute(trip: selectedTrip) {
+                        MapPolyline(MKPolyline(coordinates: routeCoordinates,
+                                               count: routeCoordinates.count))
+                        .stroke(Color.surfaceSelected, lineWidth: 5)
+                    }
+                }
             }
-            
-            Spacer()
-        }
-    }
-    
-    @ViewBuilder
-    var loadedView: some View {
-        
-        ZStack {
-            
-            Map(interactionModes: [.rotate, .zoom]) {
-                
-                // TODO: Add Marker and Annotations on task 2
-                
-            }
-            .mapStyle(.standard)
-            .ignoresSafeArea()
+                .mapStyle(.standard(elevation: .realistic))
+                .ignoresSafeArea()
                 .overlay(alignment: .bottom, content: {
                     
                     tripsView
                 })
                 .ignoresSafeArea(edges: .bottom)
         }
-    }
-    
-    @ViewBuilder
-    func failedView(error: String) -> some View {
-        
-        // TODO
-        EmptyView()
     }
 }
 
@@ -106,23 +96,36 @@ extension TripListView {
         
         VStack {
             
-            List {
+            if viewModel.trips.isEmpty {
+            
+                Text("Oops, Looks that there are no trips available!")
                 
-                VStack(alignment: .leading) {
+            } else {
+                
+                List {
                     
-                    ForEach(viewModel.trips) { trip in
+                    VStack(alignment: .leading) {
                         
-                        TripCardView(trip: trip)
+                        ForEach(viewModel.trips) { trip in
+                            
+                            TripCardView(trip: trip,
+                                         isSelected: viewModel.isSelected(trip: trip))
+                            .onTapGesture {
+                                
+                                viewModel.setSelectedTrip(trip: trip)
+                                updatePosition(trip: trip)
+                            }
+                        }
                     }
-                }
-                .padding([.top, .leading, .trailing], Constants.padding)
-                .padding(.bottom, Constants.paddingXL)
-                .listRowSeparatorTint(.clear)
+                    .padding([.top, .leading, .trailing], Constants.padding)
+                    .padding(.bottom, Constants.paddingXL)
+                    .listRowSeparatorTint(.clear)
                     .listRowBackground(Color.clear)
                     .listRowInsets(EdgeInsets())
             }
             .scrollContentBackground(.hidden)
             .listStyle(PlainListStyle())
+            }
         }
         .frame(height: Constants.tripListHeight)
         .background(
@@ -130,8 +133,25 @@ extension TripListView {
                 .fill(Color.primaryBackground)
         )
     }
+    
+    func updatePosition(trip: Trip) {
+        
+        withAnimation {
+            position = MapCameraPosition.region(MKCoordinateRegion(center: viewModel.getMidCoordinate(trip: trip),
+                                                                   span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)))
+        }
+    }
 }
 
-#Preview {
-    TripListView()
+// MARK: - Previews
+
+struct TripListView_ColorScheme_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        ForEach(ColorScheme.allCases, id: \.self) {
+            TripListView()
+            .preferredColorScheme($0)
+        }
+    }
 }

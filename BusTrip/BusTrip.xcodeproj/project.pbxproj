@@ -52,6 +52,8 @@
 		DAADEA002C2D940800B1FA5B /* PreviewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADE9FF2C2D940800B1FA5B /* PreviewSnapshotTests.swift */; };
 		DAADEA032C2D944A00B1FA5B /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DAADEA022C2D944A00B1FA5B /* PreviewSnapshotsTesting */; };
 		DAADEA052C2D955200B1FA5B /* TripCardViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADEA042C2D955200B1FA5B /* TripCardViewSnapshotTests.swift */; };
+		DAAEEF042C2DADF400181ECD /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = DAAEEF032C2DADF400181ECD /* Polyline */; };
+		DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,7 @@
 		DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerShape.swift; sourceTree = "<group>"; };
 		DAADE9FF2C2D940800B1FA5B /* PreviewSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSnapshotTests.swift; sourceTree = "<group>"; };
 		DAADEA042C2D955200B1FA5B /* TripCardViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardViewSnapshotTests.swift; sourceTree = "<group>"; };
+		DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModelUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAEEF042C2DADF400181ECD /* Polyline in Frameworks */,
 				DAADE9F22C2D5B1700B1FA5B /* PreviewSnapshots in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +386,7 @@
 		DAADE9FD2C2D940800B1FA5B /* TripList */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */,
 			);
 			path = TripList;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 			name = BusTrip;
 			packageProductDependencies = (
 				DAADE9F12C2D5B1700B1FA5B /* PreviewSnapshots */,
+				DAAEEF032C2DADF400181ECD /* Polyline */,
 			);
 			productName = BusTrip;
 			productReference = DAADE9592C2B276B00B1FA5B /* BusTrip.app */;
@@ -476,6 +482,7 @@
 			mainGroup = DAADE9502C2B276B00B1FA5B;
 			packageReferences = (
 				DAADE9F02C2D5B1700B1FA5B /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */,
+				DAAEEF022C2DADF300181ECD /* XCRemoteSwiftPackageReference "Polyline" */,
 			);
 			productRefGroup = DAADE95A2C2B276B00B1FA5B /* Products */;
 			projectDirPath = "";
@@ -544,6 +551,7 @@
 				DAADE9B72C2C1B0A00B1FA5B /* AddressUnitTests.swift in Sources */,
 				DAADE9AF2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift in Sources */,
 				DAADE9D22C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift in Sources */,
+				DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */,
 				DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */,
 				DAADEA002C2D940800B1FA5B /* PreviewSnapshotTests.swift in Sources */,
 				DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */,
@@ -625,6 +633,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -680,6 +689,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -849,6 +859,14 @@
 				version = 1.0.0;
 			};
 		};
+		DAAEEF022C2DADF300181ECD /* XCRemoteSwiftPackageReference "Polyline" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raphaelmor/Polyline";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -861,6 +879,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DAADE9F02C2D5B1700B1FA5B /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
 			productName = PreviewSnapshotsTesting;
+		};
+		DAAEEF032C2DADF400181ECD /* Polyline */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAAEEF022C2DADF300181ECD /* XCRemoteSwiftPackageReference "Polyline" */;
+			productName = Polyline;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
