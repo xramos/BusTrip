@@ -17,8 +17,8 @@ class TripListViewModel: ObservableObject {
     // Values
     
     @Published private(set) var state = State.idle
-    @Published private(set) var trips: [Trip] = []
-    @Published private(set) var selectedTrip: Trip?
+    @Published var trips: [Trip] = []
+    @Published var selectedTrip: Trip?
     
     // Cancellables
     

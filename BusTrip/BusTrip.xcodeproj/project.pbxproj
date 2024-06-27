@@ -53,6 +53,7 @@
 		DAADEA032C2D944A00B1FA5B /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DAADEA022C2D944A00B1FA5B /* PreviewSnapshotsTesting */; };
 		DAADEA052C2D955200B1FA5B /* TripCardViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADEA042C2D955200B1FA5B /* TripCardViewSnapshotTests.swift */; };
 		DAAEEF042C2DADF400181ECD /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = DAAEEF032C2DADF400181ECD /* Polyline */; };
+		DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerShape.swift; sourceTree = "<group>"; };
 		DAADE9FF2C2D940800B1FA5B /* PreviewSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSnapshotTests.swift; sourceTree = "<group>"; };
 		DAADEA042C2D955200B1FA5B /* TripCardViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardViewSnapshotTests.swift; sourceTree = "<group>"; };
+		DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModelUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +386,7 @@
 		DAADE9FD2C2D940800B1FA5B /* TripList */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */,
 			);
 			path = TripList;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				DAADE9B72C2C1B0A00B1FA5B /* AddressUnitTests.swift in Sources */,
 				DAADE9AF2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift in Sources */,
 				DAADE9D22C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift in Sources */,
+				DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */,
 				DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */,
 				DAADEA002C2D940800B1FA5B /* PreviewSnapshotTests.swift in Sources */,
 				DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */,
