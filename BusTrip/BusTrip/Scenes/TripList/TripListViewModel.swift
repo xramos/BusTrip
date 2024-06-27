@@ -9,14 +9,12 @@ import Foundation
 import SwiftUI
 import Combine
 import Polyline
-import CoreLocation
 import MapKit
 
 class TripListViewModel: ObservableObject {
     
     // Values
     
-    @Published private(set) var state = State.idle
     @Published var trips: [Trip] = []
     @Published var selectedTrip: Trip?
     
@@ -28,17 +26,15 @@ class TripListViewModel: ObservableObject {
     
     func getTrips() {
         
-        state = .loading
-        
         cancellable = GetTripsUseCase().execute()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 
                 switch completion {
                 case .finished:
-                    self.state = .loaded
+                    break
                 case .failure(let error):
-                    self.state = .failed(error.localizedDescription)
+                    print("Error: \(error.localizedDescription)")
                 }
                 
             }, receiveValue: { (trips: [Trip]) in
@@ -74,17 +70,5 @@ class TripListViewModel: ObservableObject {
         
         return CLLocationCoordinate2D(latitude: latitude,
                                       longitude: longitude)
-    }
-}
-
-extension TripListViewModel {
-    
-    // State
-    
-    enum State: Equatable {
-        case idle
-        case loading
-        case failed(String)
-        case loaded
     }
 }

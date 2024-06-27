@@ -23,7 +23,7 @@ struct TripListView: View {
             
             VStack {
                 
-                content
+                contentView
             }
         }
         .task {
@@ -36,48 +36,7 @@ struct TripListView: View {
 extension TripListView {
     
     @ViewBuilder
-    var content: some View {
-        
-        switch viewModel.state {
-        case .idle:
-            idleView
-        case .loading:
-            loadingView
-        case .loaded:
-            loadedView
-        case .failed(let error):
-            failedView(error: error)
-        }
-    }
-    
-    @ViewBuilder
-    var idleView: some View {
-        
-        EmptyView()
-    }
-    
-    @ViewBuilder
-    var loadingView: some View {
-        
-        VStack {
-            
-            Spacer()
-            
-            HStack {
-                
-                Spacer()
-                
-                ProgressView()
-                
-                Spacer()
-            }
-            
-            Spacer()
-        }
-    }
-    
-    @ViewBuilder
-    var loadedView: some View {
+    var contentView: some View {
         
         VStack {
             
@@ -128,13 +87,6 @@ extension TripListView {
                 .ignoresSafeArea(edges: .bottom)
         }
     }
-    
-    @ViewBuilder
-    func failedView(error: String) -> some View {
-        
-        // TODO
-        EmptyView()
-    }
 }
 
 extension TripListView {
@@ -144,29 +96,36 @@ extension TripListView {
         
         VStack {
             
-            List {
+            if viewModel.trips.isEmpty {
+            
+                Text("Oops, Looks that there are no trips available!")
                 
-                VStack(alignment: .leading) {
+            } else {
+                
+                List {
                     
-                    ForEach(viewModel.trips) { trip in
+                    VStack(alignment: .leading) {
                         
-                        TripCardView(trip: trip,
-                                     isSelected: viewModel.isSelected(trip: trip))
-                        .onTapGesture {
+                        ForEach(viewModel.trips) { trip in
                             
-                            viewModel.setSelectedTrip(trip: trip)
-                            updatePosition(trip: trip)
+                            TripCardView(trip: trip,
+                                         isSelected: viewModel.isSelected(trip: trip))
+                            .onTapGesture {
+                                
+                                viewModel.setSelectedTrip(trip: trip)
+                                updatePosition(trip: trip)
+                            }
                         }
                     }
-                }
-                .padding([.top, .leading, .trailing], Constants.padding)
-                .padding(.bottom, Constants.paddingXL)
-                .listRowSeparatorTint(.clear)
+                    .padding([.top, .leading, .trailing], Constants.padding)
+                    .padding(.bottom, Constants.paddingXL)
+                    .listRowSeparatorTint(.clear)
                     .listRowBackground(Color.clear)
                     .listRowInsets(EdgeInsets())
             }
             .scrollContentBackground(.hidden)
             .listStyle(PlainListStyle())
+            }
         }
         .frame(height: Constants.tripListHeight)
         .background(
@@ -184,6 +143,15 @@ extension TripListView {
     }
 }
 
-#Preview {
-    TripListView()
+// MARK: - Previews
+
+struct TripListView_ColorScheme_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        ForEach(ColorScheme.allCases, id: \.self) {
+            TripListView()
+            .preferredColorScheme($0)
+        }
+    }
 }
