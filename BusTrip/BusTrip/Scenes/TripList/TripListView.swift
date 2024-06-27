@@ -14,7 +14,7 @@ struct TripListView: View {
     
     // Init coordinates for Barcelona
     @State private var position = MapCameraPosition.region(
-        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.38074, longitude: 2.18594), span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.38074, longitude: 2.18594), span: MKCoordinateSpan(latitudeDelta: 0.6, longitudeDelta: 0.6))
     )
     
     var body: some View {
@@ -153,9 +153,7 @@ extension TripListView {
                         .onTapGesture {
                             
                             viewModel.setSelectedTrip(trip: trip)
-                            position = MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: trip.origin.lat,
-                                                                                                                  longitude: trip.origin.lon),
-                                                                                   span: MKCoordinateSpan(latitudeDelta: 0.8, longitudeDelta: 0.8)))
+                            updatePosition(trip: trip)
                         }
                     }
                 }
@@ -173,6 +171,13 @@ extension TripListView {
             RoundedCornersShape(radius: Constants.borderRadius, corners: [.topLeft, .topRight])
                 .fill(Color.primaryBackground)
         )
+    }
+    
+    func updatePosition(trip: Trip) {
+        
+        position = MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: trip.origin.lat,
+                                                                                              longitude: trip.origin.lon),
+                                                               span: MKCoordinateSpan(latitudeDelta: 0.6, longitudeDelta: 0.6)))
     }
 }
 
