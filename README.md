@@ -8,9 +8,11 @@ Technology used:
 
 Libraries Added:
 - snapshot testing (https://github.com/pointfreeco/swift-snapshot-testing)
+- poyline (https://github.com/raphaelmor/Polyline)
 
 Decisions:
 - App for iPhone on portrait mode and minimum deployment 17.0
+- Choosed blue color as primary because it's a calm color that I think fits for a Bus Trip App
 
 # Front End Problem Description
 You are asked to build a simple trip manager for our bus on demand solution. This tool will be used by the operators of the service in order to see the trips available in the system. The problem has four tasks and you should solve each one before the next.
