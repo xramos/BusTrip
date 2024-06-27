@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Stop {
+struct Stop: Identifiable {
     
     let id: Int
     let lat: Double
