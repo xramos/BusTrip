@@ -90,36 +90,31 @@ extension TripListView {
         
         VStack {
             
-            if viewModel.trips.isEmpty {
-            
-                Text("Oops, Looks that there are no trips available!")
+            List {
                 
-            } else {
-                
-                List {
+                VStack(alignment: .leading) {
                     
-                    VStack(alignment: .leading) {
+                    ForEach(viewModel.trips) { trip in
                         
-                        ForEach(viewModel.trips) { trip in
+                        TripCardView(trip: trip,
+                                     isSelected: viewModel.isSelected(trip: trip))
+                        .onTapGesture {
                             
-                            TripCardView(trip: trip,
-                                         isSelected: viewModel.isSelected(trip: trip))
-                            .onTapGesture {
-                                
-                                viewModel.setSelectedTrip(trip: trip)
-                                updatePosition(trip: trip)
-                            }
+                            viewModel.setSelectedTrip(trip: trip)
+                            updatePosition(trip: trip)
                         }
                     }
-                    .padding([.top, .leading, .trailing], Constants.padding)
-                    .padding(.bottom, Constants.paddingXL)
-                    .listRowSeparatorTint(.clear)
-                    .listRowBackground(Color.clear)
-                    .listRowInsets(EdgeInsets())
+                }
+                .padding([.top, .leading, .trailing], Constants.padding)
+                .padding(.bottom, Constants.paddingXL)
+                .listRowSeparatorTint(.clear)
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets())
             }
+            .onEmpty(for: viewModel.trips.isEmpty,
+                     with: "Oops, Looks that there are no trips available!")
             .scrollContentBackground(.hidden)
             .listStyle(PlainListStyle())
-            }
         }
         .frame(height: Constants.tripListHeight)
         .background(

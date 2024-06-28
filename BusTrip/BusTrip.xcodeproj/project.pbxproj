@@ -61,6 +61,7 @@
 		DAAEEF142C2DD1C400181ECD /* ServerStopDetailUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF132C2DD1C400181ECD /* ServerStopDetailUnitTests.swift */; };
 		DAAEEF162C2DD6D500181ECD /* GetStopDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF152C2DD6D500181ECD /* GetStopDetailUseCase.swift */; };
 		DAAEEF182C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF172C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift */; };
+		DAAEEF1A2C2F04A700181ECD /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF192C2F04A700181ECD /* EmptyDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		DAAEEF132C2DD1C400181ECD /* ServerStopDetailUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStopDetailUnitTests.swift; sourceTree = "<group>"; };
 		DAAEEF152C2DD6D500181ECD /* GetStopDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopDetailUseCase.swift; sourceTree = "<group>"; };
 		DAAEEF172C2DD70A00181ECD /* GetStopDetailUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopDetailUseCaseUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF192C2F04A700181ECD /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 				DAADE9E12C2C592100B1FA5B /* AppBackground.swift */,
 				DAADE9E92C2C6A2B00B1FA5B /* TripCardView.swift */,
 				DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */,
+				DAAEEF192C2F04A700181ECD /* EmptyDataView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAEEF1A2C2F04A700181ECD /* EmptyDataView.swift in Sources */,
 				DAADE9D52C2C55FF00B1FA5B /* GetTripsUseCase.swift in Sources */,
 				DAAEEF0C2C2DCDB400181ECD /* StopDetail.swift in Sources */,
 				DAADE99C2C2C02B900B1FA5B /* Trip.swift in Sources */,
