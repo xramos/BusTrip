@@ -12,9 +12,9 @@ struct TripListView: View {
     
     @StateObject var viewModel: TripListViewModel = TripListViewModel()
     
-    // Init coordinates for Barcelona
+    // Init coordinates for Plaça Catalunya, Barcelona
     @State private var position = MapCameraPosition.region(
-        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.38074, longitude: 2.18594), span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.3870154, longitude: 2.1674722), span: MKCoordinateSpan(latitudeDelta: Constants.latitudeDelta, longitudeDelta: Constants.longitudeDelta))
     )
     
     var body: some View {
@@ -45,8 +45,8 @@ extension TripListView {
                 
                 if let selectedTrip = viewModel.selectedTrip {
                     
-                    Marker("Origin",
-                           systemImage: "bus.fill",
+                    Marker(selectedTrip.origin.address,
+                           systemImage: Constants.markerImage,
                            coordinate: CLLocationCoordinate2D(latitude: selectedTrip.origin.lat, longitude: selectedTrip.origin.lon))
                     .tint(Color.surface)
                     
@@ -59,15 +59,19 @@ extension TripListView {
                                 .fill(Color.surface)
                                 .frame(width: Constants.iconHeight, height: Constants.iconHeight)
                                 .overlay {
-                                    Image(systemName: "figure.walk")
+                                    Image(systemName: Constants.annotationImage)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                }
+                                .onTapGesture {
+                                    
+                                    viewModel.getStopDetail(stopId: stop.id)
                                 }
                         }
                     }
                     
-                    Marker("Destination",
-                           systemImage: "bus.fill",
+                    Marker(selectedTrip.destination.address,
+                           systemImage: Constants.markerImage,
                     coordinate: CLLocationCoordinate2D(latitude: selectedTrip.destination.lat, longitude: selectedTrip.destination.lon))
                     .tint(Color.surface)
                     
@@ -138,7 +142,7 @@ extension TripListView {
         
         withAnimation {
             position = MapCameraPosition.region(MKCoordinateRegion(center: viewModel.getMidCoordinate(trip: trip),
-                                                                   span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)))
+                                                                   span: MKCoordinateSpan(latitudeDelta: Constants.latitudeDelta, longitudeDelta: Constants.longitudeDelta)))
         }
     }
 }

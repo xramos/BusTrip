@@ -17,16 +17,18 @@ class TripListViewModel: ObservableObject {
     
     @Published var trips: [Trip] = []
     @Published var selectedTrip: Trip?
+    @Published var selectedStop: StopDetail?
     
     // Cancellables
     
-    private var cancellable: AnyCancellable?
+    private var getTripsCancellable: AnyCancellable?
+    private var getStopDetailCancellable: AnyCancellable?
     
     // MARK: - Methods
     
     func getTrips() {
         
-        cancellable = GetTripsUseCase().execute()
+        getTripsCancellable = GetTripsUseCase().execute()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 
@@ -39,9 +41,25 @@ class TripListViewModel: ObservableObject {
                 
             }, receiveValue: { (trips: [Trip]) in
                 self.trips = trips
-                if let trip = trips.first {
-                    self.setSelectedTrip(trip: trip)
+            })
+    }
+    
+    func getStopDetail(stopId: Int) {
+        
+        getStopDetailCancellable = GetStopDetailUseCase().execute(stopId: stopId)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
                 }
+                
+            }, receiveValue: { (stopDetail: StopDetail) in
+                
+                self.selectedStop = stopDetail
             })
     }
     
