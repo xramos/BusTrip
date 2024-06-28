@@ -25,7 +25,10 @@ struct Constants {
     
     static let borderRadius: CGFloat = 16
     
+    static let lineWidth: CGFloat = 8
+    
     static let iconHeight: CGFloat = 24
+    static let annotationHeight: CGFloat = 40
     static let previewIconHeight: CGFloat = 200
     static let tripListHeight: CGFloat = 240
 }

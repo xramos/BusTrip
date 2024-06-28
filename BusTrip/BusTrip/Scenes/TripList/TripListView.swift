@@ -12,10 +12,7 @@ struct TripListView: View {
     
     @StateObject var viewModel: TripListViewModel = TripListViewModel()
     
-    // Init coordinates for Plaça Catalunya, Barcelona
-    @State private var position = MapCameraPosition.region(
-        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.3870154, longitude: 2.1674722), span: MKCoordinateSpan(latitudeDelta: Constants.latitudeDelta, longitudeDelta: Constants.longitudeDelta))
-    )
+    @State private var position: MapCameraPosition = .automatic
     
     var body: some View {
         
@@ -53,18 +50,11 @@ extension TripListView {
                     ForEach(selectedTrip.stops) { stop in
                         
                         Annotation("",
-                                   coordinate: CLLocationCoordinate2D(latitude: stop.lat, longitude: stop.lon)) {
+                                   coordinate: CLLocationCoordinate2D(latitude: stop.lat, longitude: stop.lon),
+                                   anchor: .top) {
                             
-                            Circle()
-                                .fill(Color.surface)
-                                .frame(width: Constants.iconHeight, height: Constants.iconHeight)
-                                .overlay {
-                                    Image(systemName: Constants.annotationImage)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                }
+                            annotationView(stop: stop)
                                 .onTapGesture {
-                                    
                                     viewModel.getStopDetail(stopId: stop.id)
                                 }
                         }
@@ -78,7 +68,7 @@ extension TripListView {
                     if let routeCoordinates = viewModel.getTripRoute(trip: selectedTrip) {
                         MapPolyline(MKPolyline(coordinates: routeCoordinates,
                                                count: routeCoordinates.count))
-                        .stroke(Color.surfaceSelected, lineWidth: 5)
+                        .stroke(Color.surfaceSelected, lineWidth: Constants.lineWidth)
                     }
                 }
             }
@@ -136,6 +126,32 @@ extension TripListView {
             RoundedCornersShape(radius: Constants.borderRadius, corners: [.topLeft, .topRight])
                 .fill(Color.primaryBackground)
         )
+    }
+    
+    @ViewBuilder
+    func annotationView(stop: Stop) -> some View {
+        
+        VStack(alignment: .center) {
+            
+            if viewModel.isSelected(stop: stop) {
+                
+                Text(viewModel.selectedStop?.address ?? "")
+            }
+                  
+            ZStack {
+                
+                Circle()
+                    .fill(Color.surface.opacity(0.5))
+                    .frame(width: Constants.annotationHeight, 
+                           height: Constants.annotationHeight)
+                
+                Image(systemName: Constants.annotationImage)
+                    .padding(Constants.padding)
+                    .foregroundStyle(.black)
+                    .background(Color.surface)
+                    .clipShape(Circle())
+            }
+        }
     }
     
     func updatePosition(trip: Trip) {

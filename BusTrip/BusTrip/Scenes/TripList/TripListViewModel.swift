@@ -41,6 +41,9 @@ class TripListViewModel: ObservableObject {
                 
             }, receiveValue: { (trips: [Trip]) in
                 self.trips = trips
+                if let trip = trips.first {
+                    self.selectedTrip = trip
+                }
             })
     }
     
@@ -71,6 +74,11 @@ class TripListViewModel: ObservableObject {
     func setSelectedTrip(trip: Trip) {
         
         selectedTrip = trip
+    }
+    
+    func isSelected(stop: Stop) -> Bool {
+        
+        return stop.id == selectedStop?.id
     }
     
     func getTripRoute(trip: Trip) -> [CLLocationCoordinate2D]? {
