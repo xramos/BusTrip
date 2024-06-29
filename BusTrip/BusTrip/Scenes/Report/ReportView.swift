@@ -17,31 +17,34 @@ struct ReportView: View {
             
             VStack {
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: Constants.padding) {
                     
                     ReportTextField(placeholder: "Name:",
+                                    helper: "Please input your name",
                                     input: $viewModel.nameInput,
                                     keyboardType: .default)
                     
                     ReportTextField(placeholder: "Surname:",
+                                    helper: "Please input your surname",
                                     input: $viewModel.surnameInput,
                                     keyboardType: .default)
                     
                     ReportTextField(placeholder: "Email:",
+                                    helper: "Please input your email",
                                     input: $viewModel.emailInput,
                                     keyboardType: .emailAddress)
                     
                     ReportTextField(placeholder: "Phone:",
+                                    helper: "Please input your phone",
                                     input: $viewModel.phoneInput,
                                     keyboardType: .phonePad)
                     
                     // Date Time
                     
-                    // Description
+                    ReportTextFieldMultiline(placeholder: "Description:",
+                                             helper: "Please input description of the issue",
+                                             input: $viewModel.reportDescription)
                 }
-                .padding(Constants.padding)
-                .background(Color.surface)
-                .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius))
                 
                 Spacer()
                 

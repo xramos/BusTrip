@@ -1,5 +1,5 @@
 //
-//  ReportTextField.swift
+//  ReportTextFieldMultiline.swift
 //  BusTrip
 //
 //  Created by Xavier Ramos on 29/6/24.
@@ -7,22 +7,21 @@
 
 import SwiftUI
 
-struct ReportTextField: View {
+struct ReportTextFieldMultiline: View {
     
     let placeholder: String
     let helper: String
     let input: Binding<String>
-    let keyboardType: UIKeyboardType
     
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: 8) {
             
             Text(placeholder)
                 .fontWeight(.bold)
             
-            TextField(helper, text: input)
-                .keyboardType(keyboardType)
+            TextField(helper, text: input, axis: .vertical)
+                .keyboardType(.default)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
         }
@@ -33,8 +32,7 @@ struct ReportTextField: View {
 }
 
 #Preview {
-    ReportTextField(placeholder: "Name:",
-                    helper: "Input your name",
-                    input: .constant(""),
-                    keyboardType: .default)
+    ReportTextFieldMultiline(placeholder: "Description",
+                             helper: "Please input description (max 200 chars)",
+                             input: .constant(""))
 }

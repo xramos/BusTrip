@@ -20,41 +20,26 @@ class ReportViewModel: ObservableObject {
     // Time
     @Published var reportDescription = ""
     
-    func isValid() -> Bool {
-        
-        return !nameInput.isBlank 
-        && !surnameInput.isBlank
-        && isValid(email: emailInput)
-        && isValid(description: reportDescription)
-    }
-    
     func isSaveButtonDisabled() -> Bool {
         
-        return nameInput.isBlank || surnameInput.isBlank || !isValid(email: emailInput) //|| isValid(description: reportDescription)
+        return nameInput.isBlank || surnameInput.isBlank || !isValid(email: emailInput) || !isValid(description: reportDescription)
     }
     
     func saveReport() {
         
-        if isValid() {
-            
-            // TODO: Handle reporTime
-            let report = Report(name: nameInput,
-                                surname: surnameInput,
-                                email: emailInput,
-                                phone: phoneInput,
-                                reportTime: "", 
-                                reportDescription: reportDescription)
-            
-            SaveReportUseCase().execute(report: report)
-            
-            // Update badge number
-            let reports = GetReportsUseCase().execute()
-            UNUserNotificationCenter.current().setBadgeCount(reports.count)
-            
-        } else {
-            
-            // Error
-        }
+        // TODO: Handle reporTime
+        let report = Report(name: nameInput,
+                            surname: surnameInput,
+                            email: emailInput,
+                            phone: phoneInput,
+                            reportTime: "",
+                            reportDescription: reportDescription)
+        
+        SaveReportUseCase().execute(report: report)
+        
+        // Update badge number
+        let reports = GetReportsUseCase().execute()
+        UNUserNotificationCenter.current().setBadgeCount(reports.count)
     }
 }
 
@@ -86,6 +71,6 @@ fileprivate extension ReportViewModel {
     
     func isValid(description: String) -> Bool {
         
-        return !description.isBlank || description.count <= 200
+        return !description.isBlank && description.count <= 200
     }
 }

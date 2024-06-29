@@ -73,8 +73,8 @@
 		DAAEEF422C30086F00181ECD /* GetReportsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */; };
 		DAAEEF442C30092300181ECD /* GetReportsUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */; };
 		DAAEEF462C300B2000181ECD /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF452C300B2000181ECD /* ReportView.swift */; };
-		DAAEEF482C300EB000181ECD /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF472C300EB000181ECD /* InputState.swift */; };
 		DAAEEF4A2C30107300181ECD /* ReportTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF492C30107300181ECD /* ReportTextField.swift */; };
+		DAAEEF4C2C30189F00181ECD /* ReportTextFieldMultiline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,8 +154,8 @@
 		DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCase.swift; sourceTree = "<group>"; };
 		DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCaseUnitTests.swift; sourceTree = "<group>"; };
 		DAAEEF452C300B2000181ECD /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
-		DAAEEF472C300EB000181ECD /* InputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputState.swift; sourceTree = "<group>"; };
 		DAAEEF492C30107300181ECD /* ReportTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextField.swift; sourceTree = "<group>"; };
+		DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextFieldMultiline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,7 +278,6 @@
 			children = (
 				DAADE99E2C2C033200B1FA5B /* Status.swift */,
 				DAADE9C42C2C282600B1FA5B /* NetworkError.swift */,
-				DAAEEF472C300EB000181ECD /* InputState.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -411,6 +410,7 @@
 				DAADE9E92C2C6A2B00B1FA5B /* TripCardView.swift */,
 				DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */,
 				DAAEEF492C30107300181ECD /* ReportTextField.swift */,
+				DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -638,6 +638,7 @@
 				DAADE9982C2C018E00B1FA5B /* Address.swift in Sources */,
 				DAADE9EF2C2CB86F00B1FA5B /* RoundedCornerShape.swift in Sources */,
 				DAADE9902C2BFC4000B1FA5B /* ServerTrip.swift in Sources */,
+				DAAEEF4C2C30189F00181ECD /* ReportTextFieldMultiline.swift in Sources */,
 				DAADE95D2C2B276B00B1FA5B /* BusTripApp.swift in Sources */,
 				DAAEEF232C2FF9A200181ECD /* Model.xcdatamodeld in Sources */,
 				DAAEEF462C300B2000181ECD /* ReportView.swift in Sources */,
@@ -650,7 +651,6 @@
 				DAADE9BE2C2C25B300B1FA5B /* TripRepository.swift in Sources */,
 				DAADE9ED2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift in Sources */,
 				DAADE9EA2C2C6A2B00B1FA5B /* TripCardView.swift in Sources */,
-				DAAEEF482C300EB000181ECD /* InputState.swift in Sources */,
 				DAADE9DE2C2C579C00B1FA5B /* TripListView.swift in Sources */,
 				DAADE9E62C2C5D7000B1FA5B /* TripListViewModel.swift in Sources */,
 				DAADE9C32C2C27C100B1FA5B /* NetworkManager.swift in Sources */,
