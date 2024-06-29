@@ -33,7 +33,7 @@ struct TripListView: View {
                     showPopover = true
                     
                 }, label: {
-                    Image(systemName: "paperplane")
+                    Image(systemName: "pencil.and.list.clipboard")
                         .foregroundColor(Color.surfaceSelected)
                 })
             }
@@ -170,20 +170,6 @@ extension TripListView {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.primaryBackground)
-            
-            // name
-            
-            // surname
-            
-            //email (validate format and not blank)
-            
-            // phone (non-mandatory)
-            
-            // date of reporting bug
-            
-            // time of reporting bug
-            
-            // multiline input text (200 characters max) to report description
         }
     }
 }
