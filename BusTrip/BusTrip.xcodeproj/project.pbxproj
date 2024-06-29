@@ -54,6 +54,22 @@
 		DAADEA052C2D955200B1FA5B /* TripCardViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADEA042C2D955200B1FA5B /* TripCardViewSnapshotTests.swift */; };
 		DAAEEF042C2DADF400181ECD /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = DAAEEF032C2DADF400181ECD /* Polyline */; };
 		DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */; };
+		DAAEEF1D2C2F10ED00181ECD /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF1C2C2F10ED00181ECD /* ReportViewModel.swift */; };
+		DAAEEF1F2C2F125500181ECD /* String+BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF1E2C2F125500181ECD /* String+BusTrip.swift */; };
+		DAAEEF232C2FF9A200181ECD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF212C2FF9A200181ECD /* Model.xcdatamodeld */; };
+		DAAEEF252C2FFA6500181ECD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF242C2FFA6500181ECD /* CoreDataStack.swift */; };
+		DAAEEF272C2FFA9900181ECD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF262C2FFA9900181ECD /* Persistence.swift */; };
+		DAAEEF292C2FFABF00181ECD /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF282C2FFABF00181ECD /* Report.swift */; };
+		DAAEEF2C2C2FFB2800181ECD /* DBReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF2B2C2FFB2800181ECD /* DBReport.swift */; };
+		DAAEEF2E2C2FFBD800181ECD /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF2D2C2FFBD800181ECD /* DBManager.swift */; };
+		DAAEEF312C2FFE0000181ECD /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF302C2FFE0000181ECD /* TestCoreDataStack.swift */; };
+		DAAEEF332C2FFE3B00181ECD /* DBManagerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF322C2FFE3B00181ECD /* DBManagerUnitTests.swift */; };
+		DAAEEF352C2FFF6D00181ECD /* ReportMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF342C2FFF6D00181ECD /* ReportMock.swift */; };
+		DAAEEF372C30004D00181ECD /* ReportUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF362C30004D00181ECD /* ReportUnitTests.swift */; };
+		DAAEEF3A2C30010B00181ECD /* DBPhoneUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF392C30010B00181ECD /* DBPhoneUnitTests.swift */; };
+		DAAEEF3C2C30035D00181ECD /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3B2C30035D00181ECD /* LocalDataSource.swift */; };
+		DAAEEF3E2C3003FA00181ECD /* SaveReportUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */; };
+		DAAEEF402C30045700181ECD /* SaveReportUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +130,22 @@
 		DAADE9FF2C2D940800B1FA5B /* PreviewSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSnapshotTests.swift; sourceTree = "<group>"; };
 		DAADEA042C2D955200B1FA5B /* TripCardViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardViewSnapshotTests.swift; sourceTree = "<group>"; };
 		DAAEEF052C2DB8FE00181ECD /* TripListViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModelUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF1C2C2F10ED00181ECD /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		DAAEEF1E2C2F125500181ECD /* String+BusTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+BusTrip.swift"; sourceTree = "<group>"; };
+		DAAEEF222C2FF9A200181ECD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DAAEEF242C2FFA6500181ECD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DAAEEF262C2FFA9900181ECD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		DAAEEF282C2FFABF00181ECD /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		DAAEEF2B2C2FFB2800181ECD /* DBReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBReport.swift; sourceTree = "<group>"; };
+		DAAEEF2D2C2FFBD800181ECD /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		DAAEEF302C2FFE0000181ECD /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		DAAEEF322C2FFE3B00181ECD /* DBManagerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF342C2FFF6D00181ECD /* ReportMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMock.swift; sourceTree = "<group>"; };
+		DAAEEF362C30004D00181ECD /* ReportUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF392C30010B00181ECD /* DBPhoneUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhoneUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF3B2C30035D00181ECD /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCase.swift; sourceTree = "<group>"; };
+		DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCaseUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +191,7 @@
 		DAADE95B2C2B276B00B1FA5B /* BusTrip */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF202C2FF99000181ECD /* DataBase */,
 				DAADE9EB2C2C6F4500B1FA5B /* Extensions */,
 				DAADE9E02C2C582D00B1FA5B /* Views */,
 				DAADE9DB2C2C577C00B1FA5B /* Scenes */,
@@ -187,6 +220,7 @@
 		DAADE9722C2B276C00B1FA5B /* BusTripTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF2F2C2FFDF300181ECD /* DataBase */,
 				DAADE9FC2C2D940800B1FA5B /* Scenes */,
 				DAADE9FB2C2D940800B1FA5B /* Views */,
 				DAADE9D82C2C56B100B1FA5B /* UseCases */,
@@ -200,6 +234,7 @@
 		DAADE98C2C2BFC3300B1FA5B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF2A2C2FFB1E00181ECD /* DBEntities */,
 				DAADE98D2C2BFC3300B1FA5B /* ServerEntities */,
 				DAADE98E2C2BFC3300B1FA5B /* Entities */,
 			);
@@ -223,6 +258,7 @@
 				DAADE9972C2C018E00B1FA5B /* Address.swift */,
 				DAADE9992C2C025D00B1FA5B /* Stop.swift */,
 				DAADE99B2C2C02B900B1FA5B /* Trip.swift */,
+				DAAEEF282C2FFABF00181ECD /* Report.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -239,6 +275,7 @@
 		DAADE9A02C2C05CD00B1FA5B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF382C3000FB00181ECD /* DBEntities */,
 				DAADE9A12C2C05CD00B1FA5B /* ServerEntities */,
 				DAADE9A22C2C05CD00B1FA5B /* Entities */,
 			);
@@ -262,6 +299,7 @@
 				DAADE9B62C2C1B0A00B1FA5B /* AddressUnitTests.swift */,
 				DAADE9B82C2C1BA100B1FA5B /* StopUnitTests.swift */,
 				DAADE9BA2C2C1C1C00B1FA5B /* TripUnitTests.swift */,
+				DAAEEF362C30004D00181ECD /* ReportUnitTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -275,6 +313,7 @@
 				DAADE9AA2C2C08F900B1FA5B /* TripMock.swift */,
 				DAADE9CA2C2C2A3700B1FA5B /* URLProtocolMock.swift */,
 				DAADE9D62C2C565D00B1FA5B /* MockTripRepository.swift */,
+				DAAEEF342C2FFF6D00181ECD /* ReportMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -285,6 +324,7 @@
 				DAADE9BD2C2C25B300B1FA5B /* TripRepository.swift */,
 				DAADE9BF2C2C25F500B1FA5B /* RemoteTripDataSource.swift */,
 				DAADE9C82C2C292400B1FA5B /* TripRepositoryImplementation.swift */,
+				DAAEEF3B2C30035D00181ECD /* LocalDataSource.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -310,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADE9D42C2C55FE00B1FA5B /* GetTripsUseCase.swift */,
+				DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -318,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift */,
+				DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -325,6 +367,7 @@
 		DAADE9DB2C2C577C00B1FA5B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF1B2C2F10E200181ECD /* Report */,
 				DAADE9DF2C2C57FF00B1FA5B /* Preview */,
 				DAADE9DC2C2C578F00B1FA5B /* TripList */,
 			);
@@ -362,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADE9EC2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift */,
+				DAAEEF1E2C2F125500181ECD /* String+BusTrip.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -404,6 +448,50 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAAEEF1B2C2F10E200181ECD /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEEF1C2C2F10ED00181ECD /* ReportViewModel.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		DAAEEF202C2FF99000181ECD /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEEF212C2FF9A200181ECD /* Model.xcdatamodeld */,
+				DAAEEF242C2FFA6500181ECD /* CoreDataStack.swift */,
+				DAAEEF262C2FFA9900181ECD /* Persistence.swift */,
+				DAAEEF2D2C2FFBD800181ECD /* DBManager.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		DAAEEF2A2C2FFB1E00181ECD /* DBEntities */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEEF2B2C2FFB2800181ECD /* DBReport.swift */,
+			);
+			path = DBEntities;
+			sourceTree = "<group>";
+		};
+		DAAEEF2F2C2FFDF300181ECD /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEEF302C2FFE0000181ECD /* TestCoreDataStack.swift */,
+				DAAEEF322C2FFE3B00181ECD /* DBManagerUnitTests.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		DAAEEF382C3000FB00181ECD /* DBEntities */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEEF392C30010B00181ECD /* DBPhoneUnitTests.swift */,
+			);
+			path = DBEntities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,19 +606,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAEEF1D2C2F10ED00181ECD /* ReportViewModel.swift in Sources */,
 				DAADE9D52C2C55FF00B1FA5B /* GetTripsUseCase.swift in Sources */,
 				DAADE99C2C2C02B900B1FA5B /* Trip.swift in Sources */,
+				DAAEEF252C2FFA6500181ECD /* CoreDataStack.swift in Sources */,
 				DAADE9C72C2C288800B1FA5B /* Constants.swift in Sources */,
+				DAAEEF3E2C3003FA00181ECD /* SaveReportUseCase.swift in Sources */,
+				DAAEEF2C2C2FFB2800181ECD /* DBReport.swift in Sources */,
+				DAAEEF3C2C30035D00181ECD /* LocalDataSource.swift in Sources */,
 				DAADE9E42C2C594F00B1FA5B /* PreviewView.swift in Sources */,
+				DAAEEF2E2C2FFBD800181ECD /* DBManager.swift in Sources */,
 				DAADE9C52C2C282600B1FA5B /* NetworkError.swift in Sources */,
+				DAAEEF1F2C2F125500181ECD /* String+BusTrip.swift in Sources */,
 				DAADE9982C2C018E00B1FA5B /* Address.swift in Sources */,
 				DAADE9EF2C2CB86F00B1FA5B /* RoundedCornerShape.swift in Sources */,
 				DAADE9902C2BFC4000B1FA5B /* ServerTrip.swift in Sources */,
 				DAADE95D2C2B276B00B1FA5B /* BusTripApp.swift in Sources */,
+				DAAEEF232C2FF9A200181ECD /* Model.xcdatamodeld in Sources */,
 				DAADE9962C2BFEA100B1FA5B /* ServerAddress.swift in Sources */,
 				DAADE9922C2BFD6600B1FA5B /* ServerPoint.swift in Sources */,
 				DAADE9E22C2C592100B1FA5B /* AppBackground.swift in Sources */,
 				DAADE99A2C2C025D00B1FA5B /* Stop.swift in Sources */,
+				DAAEEF272C2FFA9900181ECD /* Persistence.swift in Sources */,
 				DAADE9C02C2C25F500B1FA5B /* RemoteTripDataSource.swift in Sources */,
 				DAADE9BE2C2C25B300B1FA5B /* TripRepository.swift in Sources */,
 				DAADE9ED2C2C6FB400B1FA5B /* DateFormatter+BusTrip.swift in Sources */,
@@ -541,6 +638,7 @@
 				DAADE9942C2BFE1F00B1FA5B /* ServerStop.swift in Sources */,
 				DAADE9C92C2C292400B1FA5B /* TripRepositoryImplementation.swift in Sources */,
 				DAADE99F2C2C033200B1FA5B /* Status.swift in Sources */,
+				DAAEEF292C2FFABF00181ECD /* Report.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,16 +647,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAADE9B72C2C1B0A00B1FA5B /* AddressUnitTests.swift in Sources */,
+				DAAEEF352C2FFF6D00181ECD /* ReportMock.swift in Sources */,
 				DAADE9AF2C2C0DE000B1FA5B /* ServerAddressUnitTests.swift in Sources */,
 				DAADE9D22C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift in Sources */,
+				DAAEEF3A2C30010B00181ECD /* DBPhoneUnitTests.swift in Sources */,
+				DAAEEF372C30004D00181ECD /* ReportUnitTests.swift in Sources */,
 				DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */,
 				DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */,
 				DAADEA002C2D940800B1FA5B /* PreviewSnapshotTests.swift in Sources */,
 				DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */,
 				DAADE9B12C2C171B00B1FA5B /* ServerPointUnitTests.swift in Sources */,
 				DAADE9A52C2C062600B1FA5B /* PointMock.swift in Sources */,
+				DAAEEF402C30045700181ECD /* SaveReportUseCaseUnitTests.swift in Sources */,
 				DAADE9DA2C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift in Sources */,
+				DAAEEF332C2FFE3B00181ECD /* DBManagerUnitTests.swift in Sources */,
 				DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */,
+				DAAEEF312C2FFE0000181ECD /* TestCoreDataStack.swift in Sources */,
 				DAADE9CB2C2C2A3700B1FA5B /* URLProtocolMock.swift in Sources */,
 				DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */,
 				DAADE9D72C2C565D00B1FA5B /* MockTripRepository.swift in Sources */,
@@ -886,6 +990,19 @@
 			productName = Polyline;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DAAEEF212C2FF9A200181ECD /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DAAEEF222C2FF9A200181ECD /* Model.xcdatamodel */,
+			);
+			currentVersion = DAAEEF222C2FF9A200181ECD /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DAADE9512C2B276B00B1FA5B /* Project object */;
 }

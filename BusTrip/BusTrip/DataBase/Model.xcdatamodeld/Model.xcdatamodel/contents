@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="DBReport" representedClassName="DBReport" syncable="YES" codeGenerationType="class">
+        <attribute name="email" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="reportDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="reportTime" attributeType="String" defaultValueString=""/>
+        <attribute name="surname" attributeType="String" defaultValueString=""/>
+    </entity>
+</model>
