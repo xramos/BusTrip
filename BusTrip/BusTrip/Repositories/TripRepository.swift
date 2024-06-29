@@ -11,4 +11,6 @@ import Combine
 protocol TripRepository {
     
     func getTrips() -> AnyPublisher<[Trip], Error>
+    
+    func saveReport(report: Report)
 }
