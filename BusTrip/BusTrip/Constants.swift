@@ -12,6 +12,7 @@ struct Constants {
     static let baseURL = "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com"
     
     static let padding: CGFloat = 8
+    static let paddingL: CGFloat = 16
     static let paddingXL: CGFloat =  30
     
     static let cornerRadius: CGFloat = 10

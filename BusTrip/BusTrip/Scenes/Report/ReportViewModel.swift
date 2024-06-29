@@ -28,6 +28,11 @@ class ReportViewModel: ObservableObject {
         && isValid(description: reportDescription)
     }
     
+    func isSaveButtonDisabled() -> Bool {
+        
+        return nameInput.isBlank || surnameInput.isBlank || !isValid(email: emailInput) //|| isValid(description: reportDescription)
+    }
+    
     func saveReport() {
         
         if isValid() {

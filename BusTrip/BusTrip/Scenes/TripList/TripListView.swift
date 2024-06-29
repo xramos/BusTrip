@@ -40,7 +40,7 @@ struct TripListView: View {
         })
         .popover(isPresented: $showPopover) {
          
-            contactFormView
+            ReportView()
         }
         .task {
             
@@ -155,21 +155,6 @@ extension TripListView {
         withAnimation {
             position = MapCameraPosition.region(MKCoordinateRegion(center: viewModel.getMidCoordinate(trip: trip),
                                                                    span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)))
-        }
-    }
-    
-    @ViewBuilder
-    var contactFormView: some View {
-        
-        VStack {
-            
-            VStack {
-                
-                Text("TODO")
-                
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.primaryBackground)
         }
     }
 }
