@@ -70,6 +70,8 @@
 		DAAEEF3C2C30035D00181ECD /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3B2C30035D00181ECD /* LocalDataSource.swift */; };
 		DAAEEF3E2C3003FA00181ECD /* SaveReportUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */; };
 		DAAEEF402C30045700181ECD /* SaveReportUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */; };
+		DAAEEF422C30086F00181ECD /* GetReportsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */; };
+		DAAEEF442C30092300181ECD /* GetReportsUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		DAAEEF3B2C30035D00181ECD /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCase.swift; sourceTree = "<group>"; };
 		DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCaseUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCase.swift; sourceTree = "<group>"; };
+		DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCaseUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +355,7 @@
 			children = (
 				DAADE9D42C2C55FE00B1FA5B /* GetTripsUseCase.swift */,
 				DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */,
+				DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 			children = (
 				DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift */,
 				DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */,
+				DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				DAAEEF252C2FFA6500181ECD /* CoreDataStack.swift in Sources */,
 				DAADE9C72C2C288800B1FA5B /* Constants.swift in Sources */,
 				DAAEEF3E2C3003FA00181ECD /* SaveReportUseCase.swift in Sources */,
+				DAAEEF422C30086F00181ECD /* GetReportsUseCase.swift in Sources */,
 				DAAEEF2C2C2FFB2800181ECD /* DBReport.swift in Sources */,
 				DAAEEF3C2C30035D00181ECD /* LocalDataSource.swift in Sources */,
 				DAADE9E42C2C594F00B1FA5B /* PreviewView.swift in Sources */,
@@ -662,6 +669,7 @@
 				DAADE9DA2C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift in Sources */,
 				DAAEEF332C2FFE3B00181ECD /* DBManagerUnitTests.swift in Sources */,
 				DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */,
+				DAAEEF442C30092300181ECD /* GetReportsUseCaseUnitTests.swift in Sources */,
 				DAAEEF312C2FFE0000181ECD /* TestCoreDataStack.swift in Sources */,
 				DAADE9CB2C2C2A3700B1FA5B /* URLProtocolMock.swift in Sources */,
 				DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */,

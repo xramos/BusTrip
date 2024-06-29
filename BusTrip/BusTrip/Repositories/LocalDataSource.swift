@@ -16,6 +16,11 @@ class LocalDataSource {
         self.dbManager = dbManager
     }
     
+    func getReports() -> [Report] {
+        
+        return dbManager.getReports()
+    }
+    
     func saveReport(report: Report) {
         
         dbManager.saveReport(report: report)

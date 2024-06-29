@@ -13,6 +13,7 @@ class MockTripRepository: TripRepository {
     
     var isGetTripsCalled: Bool = false
     
+    var isGetReportsCalled: Bool = false
     var isSaveReportCalled: Bool = false
     
     @discardableResult func getTrips() -> AnyPublisher<[Trip], Error> {
@@ -21,6 +22,13 @@ class MockTripRepository: TripRepository {
         
         // We don't care about the return result
         return Result.Publisher([]).eraseToAnyPublisher()
+    }
+    
+    @discardableResult func getReports() -> [Report] {
+        
+        isGetReportsCalled = true
+        
+        return []
     }
     
     func saveReport(report: Report) {

@@ -44,6 +44,11 @@ extension TripRepositoryImplementation: TripRepository {
         .eraseToAnyPublisher()
     }
     
+    func getReports() -> [Report] {
+        
+        return localDataSource.getReports()
+    }
+    
     func saveReport(report: Report) {
         
         localDataSource.saveReport(report: report)
