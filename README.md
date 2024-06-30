@@ -5,6 +5,7 @@ Technology used:
 - XCode 15.0.1
 - Combine
 - SwiftUI
+- CoreData
 
 Libraries Added:
 - snapshot testing (https://github.com/pointfreeco/swift-snapshot-testing)
@@ -13,6 +14,10 @@ Libraries Added:
 Decisions:
 - App for iPhone on portrait mode and minimum deployment 17.0
 - Choosed blue color as primary because it's a calm color that I think fits for a Bus Trip App
+- Select first trip (if available) at the start
+- Set minimum date for the report 10 years ago and maximum date today
+- Preestablish date as now
+- Disable save button until information is valid
 
 # Front End Problem Description
 You are asked to build a simple trip manager for our bus on demand solution. This tool will be used by the operators of the service in order to see the trips available in the system. The problem has four tasks and you should solve each one before the next.
