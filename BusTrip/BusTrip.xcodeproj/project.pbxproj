@@ -85,6 +85,9 @@
 		DAAEEF612C31CBF200181ECD /* ServerStopDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF602C31CBF200181ECD /* ServerStopDetail.swift */; };
 		DAAEEF632C31CC0900181ECD /* GetStopDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF622C31CC0900181ECD /* GetStopDetailUseCase.swift */; };
 		DAAEEF652C31CC2400181ECD /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF642C31CC2400181ECD /* EmptyDataView.swift */; };
+		DAAEEF692C31E16800181ECD /* StopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF682C31E16800181ECD /* StopInfoView.swift */; };
+		DAAEEF6B2C31E38800181ECD /* StopInfoViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF6A2C31E38800181ECD /* StopInfoViewSnapshotTests.swift */; };
+		DAAEEF6D2C31E4DE00181ECD /* GetStopDetailUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF6C2C31E4DE00181ECD /* GetStopDetailUseCaseUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +179,9 @@
 		DAAEEF602C31CBF200181ECD /* ServerStopDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerStopDetail.swift; sourceTree = "<group>"; };
 		DAAEEF622C31CC0900181ECD /* GetStopDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStopDetailUseCase.swift; sourceTree = "<group>"; };
 		DAAEEF642C31CC2400181ECD /* EmptyDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
+		DAAEEF682C31E16800181ECD /* StopInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoView.swift; sourceTree = "<group>"; };
+		DAAEEF6A2C31E38800181ECD /* StopInfoViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoViewSnapshotTests.swift; sourceTree = "<group>"; };
+		DAAEEF6C2C31E4DE00181ECD /* GetStopDetailUseCaseUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStopDetailUseCaseUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +398,7 @@
 		DAADE9D82C2C56B100B1FA5B /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF6C2C31E4DE00181ECD /* GetStopDetailUseCaseUnitTests.swift */,
 				DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift */,
 				DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */,
 				DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */,
@@ -436,6 +443,7 @@
 				DAAEEF492C30107300181ECD /* ReportTextField.swift */,
 				DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */,
 				DAAEEF4D2C30226300181ECD /* ReportDatePicker.swift */,
+				DAAEEF682C31E16800181ECD /* StopInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,6 +464,7 @@
 				DAAEEF532C31C2B600181ECD /* ReportTextFieldSnapshotTests.swift */,
 				DAAEEF552C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift */,
 				DAAEEF572C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift */,
+				DAAEEF6A2C31E38800181ECD /* StopInfoViewSnapshotTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -663,6 +672,7 @@
 				DAAEEF4E2C30226300181ECD /* ReportDatePicker.swift in Sources */,
 				DAADE9D52C2C55FF00B1FA5B /* GetTripsUseCase.swift in Sources */,
 				DAADE99C2C2C02B900B1FA5B /* Trip.swift in Sources */,
+				DAAEEF692C31E16800181ECD /* StopInfoView.swift in Sources */,
 				DAAEEF252C2FFA6500181ECD /* CoreDataStack.swift in Sources */,
 				DAADE9C72C2C288800B1FA5B /* Constants.swift in Sources */,
 				DAAEEF3E2C3003FA00181ECD /* SaveReportUseCase.swift in Sources */,
@@ -717,7 +727,9 @@
 				DAAEEF542C31C2B600181ECD /* ReportTextFieldSnapshotTests.swift in Sources */,
 				DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */,
 				DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */,
+				DAAEEF6D2C31E4DE00181ECD /* GetStopDetailUseCaseUnitTests.swift in Sources */,
 				DAADEA002C2D940800B1FA5B /* PreviewSnapshotTests.swift in Sources */,
+				DAAEEF6B2C31E38800181ECD /* StopInfoViewSnapshotTests.swift in Sources */,
 				DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */,
 				DAADE9B12C2C171B00B1FA5B /* ServerPointUnitTests.swift in Sources */,
 				DAADE9A52C2C062600B1FA5B /* PointMock.swift in Sources */,
