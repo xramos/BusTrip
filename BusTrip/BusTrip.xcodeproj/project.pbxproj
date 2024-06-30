@@ -80,6 +80,7 @@
 		DAAEEF562C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF552C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift */; };
 		DAAEEF582C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF572C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift */; };
 		DAAEEF5B2C31C4D500181ECD /* ReportViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF5A2C31C4D500181ECD /* ReportViewModelUnitTests.swift */; };
+		DAAEEF5D2C31C7CA00181ECD /* ReportViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF5C2C31C7CA00181ECD /* ReportViewSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		DAAEEF552C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextFieldMultilineSnapshotTests.swift; sourceTree = "<group>"; };
 		DAAEEF572C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDatePickerSnapshotTests.swift; sourceTree = "<group>"; };
 		DAAEEF5A2C31C4D500181ECD /* ReportViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModelUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF5C2C31C7CA00181ECD /* ReportViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				DAAEEF5A2C31C4D500181ECD /* ReportViewModelUnitTests.swift */,
+				DAAEEF5C2C31C7CA00181ECD /* ReportViewSnapshotTests.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				DAADE9A52C2C062600B1FA5B /* PointMock.swift in Sources */,
 				DAAEEF402C30045700181ECD /* SaveReportUseCaseUnitTests.swift in Sources */,
 				DAADE9DA2C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift in Sources */,
+				DAAEEF5D2C31C7CA00181ECD /* ReportViewSnapshotTests.swift in Sources */,
 				DAAEEF332C2FFE3B00181ECD /* DBManagerUnitTests.swift in Sources */,
 				DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */,
 				DAAEEF562C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift in Sources */,

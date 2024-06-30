@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct ReportView: View {
     
@@ -81,6 +82,30 @@ struct ReportView: View {
     }
 }
 
-#Preview {
-    ReportView()
+// MARK: - Previews
+
+struct ReportView_ColorScheme_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        ForEach(ColorScheme.allCases, id: \.self) {
+            ReportView()
+                .preferredColorScheme($0)
+        }
+    }
+}
+
+struct ReportView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        PreviewSnapshots(configurations: [
+            .init(name: "Default", state: "")
+        ], configure: { _ in
+            ReportView()
+        })
+    }
 }
