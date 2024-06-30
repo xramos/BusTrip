@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct ReportDatePicker: View {
     
@@ -88,5 +89,26 @@ struct ReportDatePicker_ColorScheme_Previews: PreviewProvider {
                              maximumDate: Date())
             .preferredColorScheme($0)
         }
+    }
+}
+
+struct ReportDatePicker_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        
+        PreviewSnapshots(configurations: [
+            .init(name: "Default", state: "")
+        ], configure: { state in
+            
+            ReportDatePicker(placeholder: "Report date:",
+                             date: .constant(Date()),
+                             minimumDate: Date(),
+                             maximumDate: Date())
+        })
     }
 }

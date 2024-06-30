@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct ReportTextField: View {
     
@@ -22,7 +23,7 @@ struct ReportTextField: View {
                 .fontWeight(.bold)
             
             TextField(helper, text: input)
-                .tint(Color.primaryBackground)
+                .tint(Color.surfaceSelected)
                 .keyboardType(keyboardType)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
@@ -46,5 +47,26 @@ struct ReportTextField_ColorScheme_Previews: PreviewProvider {
                             keyboardType: .default)
             .preferredColorScheme($0)
         }
+    }
+}
+
+struct ReportTextField_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        
+        PreviewSnapshots(configurations: [
+            .init(name: "Default", state: "")
+        ], configure: { state in
+            
+            ReportTextField(placeholder: "Name:",
+                            helper: "Input your name",
+                            input: .constant(""),
+                            keyboardType: .default)
+        })
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct ReportTextFieldMultiline: View {
     
@@ -21,7 +22,7 @@ struct ReportTextFieldMultiline: View {
                 .fontWeight(.bold)
             
             TextField(helper, text: input, axis: .vertical)
-                .tint(Color.primaryBackground)
+                .tint(Color.surfaceSelected)
                 .keyboardType(.default)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
@@ -44,5 +45,25 @@ struct ReportTextFieldMultiline_ColorScheme_Previews: PreviewProvider {
                                      input: .constant(""))
             .preferredColorScheme($0)
         }
+    }
+}
+
+struct ReportTextFieldMultiline_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        
+        PreviewSnapshots(configurations: [
+            .init(name: "Default", state: "")
+        ], configure: { state in
+            
+            ReportTextFieldMultiline(placeholder: "Description",
+                                     helper: "Please input description (max 200 chars)",
+                                     input: .constant(""))
+        })
     }
 }

@@ -64,7 +64,7 @@ struct ReportView: View {
             .disabled(viewModel.isSaveButtonDisabled())
             .padding(Constants.padding)
             .frame(maxWidth: .infinity)
-            .tint(Color.primaryBackground)
+            .tint(Color.surfaceSelected)
             .background(Color.surface)
             .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius))
         }

@@ -76,6 +76,10 @@
 		DAAEEF4A2C30107300181ECD /* ReportTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF492C30107300181ECD /* ReportTextField.swift */; };
 		DAAEEF4C2C30189F00181ECD /* ReportTextFieldMultiline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */; };
 		DAAEEF4E2C30226300181ECD /* ReportDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF4D2C30226300181ECD /* ReportDatePicker.swift */; };
+		DAAEEF542C31C2B600181ECD /* ReportTextFieldSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF532C31C2B600181ECD /* ReportTextFieldSnapshotTests.swift */; };
+		DAAEEF562C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF552C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift */; };
+		DAAEEF582C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF572C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift */; };
+		DAAEEF5B2C31C4D500181ECD /* ReportViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF5A2C31C4D500181ECD /* ReportViewModelUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +162,10 @@
 		DAAEEF492C30107300181ECD /* ReportTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextField.swift; sourceTree = "<group>"; };
 		DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextFieldMultiline.swift; sourceTree = "<group>"; };
 		DAAEEF4D2C30226300181ECD /* ReportDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDatePicker.swift; sourceTree = "<group>"; };
+		DAAEEF532C31C2B600181ECD /* ReportTextFieldSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextFieldSnapshotTests.swift; sourceTree = "<group>"; };
+		DAAEEF552C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextFieldMultilineSnapshotTests.swift; sourceTree = "<group>"; };
+		DAAEEF572C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDatePickerSnapshotTests.swift; sourceTree = "<group>"; };
+		DAAEEF5A2C31C4D500181ECD /* ReportViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModelUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +439,9 @@
 			isa = PBXGroup;
 			children = (
 				DAADEA042C2D955200B1FA5B /* TripCardViewSnapshotTests.swift */,
+				DAAEEF532C31C2B600181ECD /* ReportTextFieldSnapshotTests.swift */,
+				DAAEEF552C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift */,
+				DAAEEF572C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,6 +449,7 @@
 		DAADE9FC2C2D940800B1FA5B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEEF592C31C4C500181ECD /* Report */,
 				DAADE9FD2C2D940800B1FA5B /* TripList */,
 				DAADE9FE2C2D940800B1FA5B /* Preview */,
 			);
@@ -510,6 +522,14 @@
 				DAAEEF392C30010B00181ECD /* DBPhoneUnitTests.swift */,
 			);
 			path = DBEntities;
+			sourceTree = "<group>";
+		};
+		DAAEEF592C31C4C500181ECD /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEEF5A2C31C4D500181ECD /* ReportViewModelUnitTests.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -675,6 +695,7 @@
 				DAADE9D22C2C4BA500B1FA5B /* TripRepositoryImplementationUnitTests.swift in Sources */,
 				DAAEEF3A2C30010B00181ECD /* DBPhoneUnitTests.swift in Sources */,
 				DAAEEF372C30004D00181ECD /* ReportUnitTests.swift in Sources */,
+				DAAEEF542C31C2B600181ECD /* ReportTextFieldSnapshotTests.swift in Sources */,
 				DAAEEF062C2DB8FE00181ECD /* TripListViewModelUnitTests.swift in Sources */,
 				DAADE9B32C2C188A00B1FA5B /* ServerStopUnitTests.swift in Sources */,
 				DAADEA002C2D940800B1FA5B /* PreviewSnapshotTests.swift in Sources */,
@@ -685,11 +706,14 @@
 				DAADE9DA2C2C56C800B1FA5B /* GetTripsUseCaseUnitTests.swift in Sources */,
 				DAAEEF332C2FFE3B00181ECD /* DBManagerUnitTests.swift in Sources */,
 				DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */,
+				DAAEEF562C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift in Sources */,
+				DAAEEF5B2C31C4D500181ECD /* ReportViewModelUnitTests.swift in Sources */,
 				DAAEEF442C30092300181ECD /* GetReportsUseCaseUnitTests.swift in Sources */,
 				DAAEEF312C2FFE0000181ECD /* TestCoreDataStack.swift in Sources */,
 				DAADE9CB2C2C2A3700B1FA5B /* URLProtocolMock.swift in Sources */,
 				DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */,
 				DAADE9D72C2C565D00B1FA5B /* MockTripRepository.swift in Sources */,
+				DAAEEF582C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift in Sources */,
 				DAADEA052C2D955200B1FA5B /* TripCardViewSnapshotTests.swift in Sources */,
 				DAADE9B52C2C192900B1FA5B /* ServerTripUnitTests.swift in Sources */,
 				DAADE9D02C2C2A7C00B1FA5B /* RemoteTripDataSourceUnitTests.swift in Sources */,
