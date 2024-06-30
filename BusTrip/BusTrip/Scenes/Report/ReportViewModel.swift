@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class ReportViewModel: ObservableObject {
  
@@ -22,6 +23,13 @@ class ReportViewModel: ObservableObject {
     var minimumDate: Date
     var maximumDate: Date
     var dateString: String
+    
+    var saveReportPublisher = PassthroughSubject<Bool, Never>()
+    private var reportSaved = false {
+        didSet {
+            saveReportPublisher.send(reportSaved)
+        }
+    }
     
     // MARK: - Methods
     
@@ -67,6 +75,8 @@ class ReportViewModel: ObservableObject {
         // Update badge number
         let reports = GetReportsUseCase().execute()
         UNUserNotificationCenter.current().setBadgeCount(reports.count)
+        
+        reportSaved = true
     }
 }
 

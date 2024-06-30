@@ -11,7 +11,7 @@ struct ReportView: View {
     
     @StateObject var viewModel: ReportViewModel = ReportViewModel()
     
-    @State var showDatePicker: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         
@@ -41,7 +41,8 @@ struct ReportView: View {
                                     input: $viewModel.phoneInput,
                                     keyboardType: .phonePad)
                     
-                    ReportDatePicker(date: $viewModel.date,
+                    ReportDatePicker(placeholder: "Date:",
+                                     date: $viewModel.date,
                                      minimumDate: viewModel.minimumDate,
                                      maximumDate: viewModel.maximumDate)
                     .onChange(of: viewModel.date, { oldValue, newValue in
@@ -51,10 +52,10 @@ struct ReportView: View {
                     ReportTextFieldMultiline(placeholder: "Description:",
                                              helper: "Please input description of the issue",
                                              input: $viewModel.reportDescription)
+                    
+                    Spacer()
                 }
             }
-            
-            Spacer()
             
             Button("Save") {
                 
@@ -63,13 +64,20 @@ struct ReportView: View {
             .disabled(viewModel.isSaveButtonDisabled())
             .padding(Constants.padding)
             .frame(maxWidth: .infinity)
+            .tint(Color.primaryBackground)
             .background(Color.surface)
             .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius))
         }
-        
         .padding(Constants.paddingL)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.primaryBackground)
+        .onReceive(viewModel.saveReportPublisher, perform: { reportSaved in
+            
+            if reportSaved {
+                
+                presentationMode.wrappedValue.dismiss()
+            }
+        })
     }
 }
 

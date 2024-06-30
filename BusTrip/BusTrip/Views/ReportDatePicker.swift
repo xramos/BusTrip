@@ -12,9 +12,10 @@ struct ReportDatePicker: View {
     @State var dateString: String = ""
     @State var isExpanded: Bool = false
     
+    let placeholder: String
     @Binding var date: Date
-    var minimumDate: Date
-    var maximumDate: Date
+    let minimumDate: Date
+    let maximumDate: Date
     
     var body: some View {
         
@@ -22,7 +23,13 @@ struct ReportDatePicker: View {
             
             HStack {
                 
-                Text("Date: \(dateString)")
+                VStack(alignment: .leading) {
+                    
+                    Text(placeholder)
+                        .fontWeight(.bold)
+                    
+                    Text("\(dateString)")
+                }
                 
                 Spacer()
             }
@@ -75,7 +82,8 @@ struct ReportDatePicker_ColorScheme_Previews: PreviewProvider {
         
         ForEach(ColorScheme.allCases, id: \.self) {
             
-            ReportDatePicker(date: .constant(Date()),
+            ReportDatePicker(placeholder: "Report date:",
+                             date: .constant(Date()),
                              minimumDate: Date(),
                              maximumDate: Date())
             .preferredColorScheme($0)

@@ -22,6 +22,7 @@ struct ReportTextField: View {
                 .fontWeight(.bold)
             
             TextField(helper, text: input)
+                .tint(Color.primaryBackground)
                 .keyboardType(keyboardType)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()

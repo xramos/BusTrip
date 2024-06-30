@@ -47,6 +47,10 @@ struct TripListView: View {
             showPopover = false
             viewModel.getTrips()
         }
+        .onAppear() {
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: .badge) { _, _ in }
+        }
     }
 }
 

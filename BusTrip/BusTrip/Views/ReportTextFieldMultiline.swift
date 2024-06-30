@@ -21,6 +21,7 @@ struct ReportTextFieldMultiline: View {
                 .fontWeight(.bold)
             
             TextField(helper, text: input, axis: .vertical)
+                .tint(Color.primaryBackground)
                 .keyboardType(.default)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
