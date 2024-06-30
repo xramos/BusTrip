@@ -75,6 +75,7 @@
 		DAAEEF462C300B2000181ECD /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF452C300B2000181ECD /* ReportView.swift */; };
 		DAAEEF4A2C30107300181ECD /* ReportTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF492C30107300181ECD /* ReportTextField.swift */; };
 		DAAEEF4C2C30189F00181ECD /* ReportTextFieldMultiline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */; };
+		DAAEEF4E2C30226300181ECD /* ReportDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF4D2C30226300181ECD /* ReportDatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		DAAEEF452C300B2000181ECD /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		DAAEEF492C30107300181ECD /* ReportTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextField.swift; sourceTree = "<group>"; };
 		DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextFieldMultiline.swift; sourceTree = "<group>"; };
+		DAAEEF4D2C30226300181ECD /* ReportDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +413,7 @@
 				DAADE9EE2C2CB86F00B1FA5B /* RoundedCornerShape.swift */,
 				DAAEEF492C30107300181ECD /* ReportTextField.swift */,
 				DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */,
+				DAAEEF4D2C30226300181ECD /* ReportDatePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAEEF1D2C2F10ED00181ECD /* ReportViewModel.swift in Sources */,
+				DAAEEF4E2C30226300181ECD /* ReportDatePicker.swift in Sources */,
 				DAADE9D52C2C55FF00B1FA5B /* GetTripsUseCase.swift in Sources */,
 				DAADE99C2C2C02B900B1FA5B /* Trip.swift in Sources */,
 				DAAEEF252C2FFA6500181ECD /* CoreDataStack.swift in Sources */,

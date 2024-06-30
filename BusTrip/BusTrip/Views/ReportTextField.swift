@@ -32,9 +32,18 @@ struct ReportTextField: View {
     }
 }
 
-#Preview {
-    ReportTextField(placeholder: "Name:",
-                    helper: "Input your name",
-                    input: .constant(""),
-                    keyboardType: .default)
+// MARK: - Previews
+
+struct ReportTextField_ColorScheme_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        ForEach(ColorScheme.allCases, id: \.self) {
+            ReportTextField(placeholder: "Name:",
+                            helper: "Input your name",
+                            input: .constant(""),
+                            keyboardType: .default)
+            .preferredColorScheme($0)
+        }
+    }
 }

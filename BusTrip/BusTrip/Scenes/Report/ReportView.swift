@@ -11,11 +11,13 @@ struct ReportView: View {
     
     @StateObject var viewModel: ReportViewModel = ReportViewModel()
     
+    @State var showDatePicker: Bool = false
+    
     var body: some View {
         
         VStack {
             
-            VStack {
+            ScrollView {
                 
                 VStack(alignment: .leading, spacing: Constants.padding) {
                     
@@ -39,29 +41,35 @@ struct ReportView: View {
                                     input: $viewModel.phoneInput,
                                     keyboardType: .phonePad)
                     
-                    // Date Time
+                    ReportDatePicker(date: $viewModel.date,
+                                     minimumDate: viewModel.minimumDate,
+                                     maximumDate: viewModel.maximumDate)
+                    .onChange(of: viewModel.date, { oldValue, newValue in
+                        viewModel.updateDateString()
+                    })
                     
                     ReportTextFieldMultiline(placeholder: "Description:",
                                              helper: "Please input description of the issue",
                                              input: $viewModel.reportDescription)
                 }
-                
-                Spacer()
-                
-                Button("Save") {
-                    
-                    viewModel.saveReport()
-                }
-                .disabled(viewModel.isSaveButtonDisabled())
-                .padding(Constants.padding)
-                .frame(maxWidth: .infinity)
-                .background(Color.surface)
-                .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius))
             }
-            .padding(Constants.paddingL)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.primaryBackground)
+            
+            Spacer()
+            
+            Button("Save") {
+                
+                viewModel.saveReport()
+            }
+            .disabled(viewModel.isSaveButtonDisabled())
+            .padding(Constants.padding)
+            .frame(maxWidth: .infinity)
+            .background(Color.surface)
+            .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius))
         }
+        
+        .padding(Constants.paddingL)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.primaryBackground)
     }
 }
 

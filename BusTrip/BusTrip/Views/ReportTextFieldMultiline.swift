@@ -31,8 +31,17 @@ struct ReportTextFieldMultiline: View {
     }
 }
 
-#Preview {
-    ReportTextFieldMultiline(placeholder: "Description",
-                             helper: "Please input description (max 200 chars)",
-                             input: .constant(""))
+// MARK: - Previews
+
+struct ReportTextFieldMultiline_ColorScheme_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        ForEach(ColorScheme.allCases, id: \.self) {
+            ReportTextFieldMultiline(placeholder: "Description",
+                                     helper: "Please input description (max 200 chars)",
+                                     input: .constant(""))
+            .preferredColorScheme($0)
+        }
+    }
 }

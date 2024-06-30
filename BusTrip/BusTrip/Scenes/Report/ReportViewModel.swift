@@ -16,23 +16,50 @@ class ReportViewModel: ObservableObject {
     @Published var surnameInput = ""
     @Published var emailInput = ""
     @Published var phoneInput = ""
-    // Date
-    // Time
+    @Published var date: Date
     @Published var reportDescription = ""
+    
+    var minimumDate: Date
+    var maximumDate: Date
+    var dateString: String
+    
+    // MARK: - Methods
+    
+    init() {
+        
+        let currentDate = Date()
+        date = currentDate
+        
+        // minimum date 10 years ago
+        minimumDate = Calendar.current.date(byAdding: .year, value: -10, to: currentDate) ?? currentDate
+        maximumDate = currentDate
+        
+        let formatter = DateFormatter.shortTotalWithLocale
+        dateString = formatter.string(from: currentDate)
+    }
+    
+    func updateDateString() {
+        
+        let formatter = DateFormatter.shortTotalWithLocale
+        dateString = formatter.string(from: date)
+    }
     
     func isSaveButtonDisabled() -> Bool {
         
-        return nameInput.isBlank || surnameInput.isBlank || !isValid(email: emailInput) || !isValid(description: reportDescription)
+        return nameInput.isBlank 
+        || surnameInput.isBlank
+        || !isValid(email: emailInput)
+        || dateString.isBlank
+        || !isValid(description: reportDescription)
     }
     
     func saveReport() {
         
-        // TODO: Handle reporTime
         let report = Report(name: nameInput,
                             surname: surnameInput,
                             email: emailInput,
                             phone: phoneInput,
-                            reportTime: "",
+                            reportTime: dateString,
                             reportDescription: reportDescription)
         
         SaveReportUseCase().execute(report: report)
