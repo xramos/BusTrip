@@ -12,6 +12,8 @@ struct TripListView: View {
     
     @StateObject var viewModel: TripListViewModel = TripListViewModel()
     
+    @State private var showPopover = false
+    
     // Init coordinates for Barcelona
     @State private var position = MapCameraPosition.region(
         MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.38074, longitude: 2.18594), span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
@@ -21,14 +23,33 @@ struct TripListView: View {
         
         VStack {
             
-            VStack {
+            contentView
+        }
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing) {
                 
-                contentView
+                Button(action: {
+                    
+                    showPopover = true
+                    
+                }, label: {
+                    Image(systemName: "pencil.and.list.clipboard")
+                        .foregroundColor(Color.surfaceSelected)
+                })
             }
+        })
+        .popover(isPresented: $showPopover) {
+         
+            ReportView()
         }
         .task {
             
+            showPopover = false
             viewModel.getTrips()
+        }
+        .onAppear() {
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: .badge) { _, _ in }
         }
     }
 }
@@ -79,7 +100,6 @@ extension TripListView {
                 }
             }
                 .mapStyle(.standard(elevation: .realistic))
-                .ignoresSafeArea()
                 .overlay(alignment: .bottom, content: {
                     
                     tripsView
