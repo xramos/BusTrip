@@ -14,7 +14,8 @@ final class TripCardViewSnapshotTests: XCTestCase {
 
     func test_snapshots() {
         
-        //isRecording = true
-        TripCardView_Previews.snapshots.assertSnapshots(as: .image(perceptualPrecision: 0.98, layout: .device(config: .iPhoneX(.portrait))))
+        // isRecording = true
+        TripCardView_Previews.snapshots.assertSnapshots(as: .image(perceptualPrecision: 0.98, 
+                                                                   layout: .device(config: .iPhoneX(.portrait))))
     }
 }

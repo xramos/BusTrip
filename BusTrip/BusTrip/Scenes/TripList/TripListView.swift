@@ -13,19 +13,40 @@ struct TripListView: View {
     @StateObject var viewModel: TripListViewModel = TripListViewModel()
     
     @State private var position: MapCameraPosition = .automatic
+
+    @State private var showPopover = false
     
     var body: some View {
         
         VStack {
             
-            VStack {
+            contentView
+        }
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing) {
                 
-                contentView
+                Button(action: {
+                    
+                    showPopover = true
+                    
+                }, label: {
+                    Image(systemName: "pencil.and.list.clipboard")
+                        .foregroundColor(Color.surfaceSelected)
+                })
             }
+        })
+        .popover(isPresented: $showPopover) {
+         
+            ReportView()
         }
         .task {
             
+            showPopover = false
             viewModel.getTrips()
+        }
+        .onAppear() {
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: .badge) { _, _ in }
         }
     }
 }
@@ -73,7 +94,6 @@ extension TripListView {
                 }
             }
                 .mapStyle(.standard(elevation: .realistic))
-                .ignoresSafeArea()
                 .overlay(alignment: .bottom, content: {
                     
                     tripsView

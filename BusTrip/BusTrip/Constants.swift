@@ -19,6 +19,7 @@ struct Constants {
     static let longitudeDelta = 0.38
     
     static let padding: CGFloat = 8
+    static let paddingL: CGFloat = 16
     static let paddingXL: CGFloat =  30
     
     static let cornerRadius: CGFloat = 10

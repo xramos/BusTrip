@@ -11,9 +11,13 @@ import Combine
 class TripRepositoryImplementation {
     
     private let remoteDataSource: RemoteTripDataSource
+    private let localDataSource: LocalDataSource
     
-    init(remoteDataSource: RemoteTripDataSource = RemoteTripDataSource()) {
+    init(remoteDataSource: RemoteTripDataSource = RemoteTripDataSource(),
+         localDataSource: LocalDataSource = LocalDataSource()) {
+        
         self.remoteDataSource = remoteDataSource
+        self.localDataSource = localDataSource
     }
 }
 
@@ -48,5 +52,15 @@ extension TripRepositoryImplementation: TripRepository {
         }
         .mapError({ $0 })
         .eraseToAnyPublisher()
+    }
+    
+    func getReports() -> [Report] {
+        
+        return localDataSource.getReports()
+    }
+    
+    func saveReport(report: Report) {
+        
+        localDataSource.saveReport(report: report)
     }
 }

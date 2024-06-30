@@ -13,4 +13,8 @@ protocol TripRepository {
     func getTrips() -> AnyPublisher<[Trip], Error>
     
     func getStopDetail(stopId: Int) -> AnyPublisher<StopDetail, Error>
+    
+    func getReports() -> [Report]
+    
+    func saveReport(report: Report)
 }
