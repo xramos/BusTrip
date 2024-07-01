@@ -27,16 +27,16 @@ Things to improve:
 - Add user location
 
 # Screenshots
-<img src="https://github.com/xramos/BusTrip/assets/1492227/7a29aad1-ce9e-4191-af52-1281bb7fc05c" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/4bed7010-f941-47d3-83bf-ce8bcf24021e" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/554ded2d-1ac8-4df5-be5e-0aa418f7db6a" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/9bf1667b-b43d-47ee-8905-3552527485f2" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/e93bdd3f-322e-4662-9f42-271bc02731cb" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/1fc7dd22-9ce5-4e6a-b17e-a43a0ed54910" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/1288dc14-8e2e-4f7d-9677-0b9d7e8a2560" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/298690fb-a405-466d-88d2-1d9a97345639" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/b71285a6-d419-4211-98f5-d22928446fe6" width="180" />
-<img src="https://github.com/xramos/BusTrip/assets/1492227/25f82887-a539-4a1e-abdc-931a979c8edc" width="180" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/7a29aad1-ce9e-4191-af52-1281bb7fc05c" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/4bed7010-f941-47d3-83bf-ce8bcf24021e" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/554ded2d-1ac8-4df5-be5e-0aa418f7db6a" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/9bf1667b-b43d-47ee-8905-3552527485f2" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/e93bdd3f-322e-4662-9f42-271bc02731cb" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/1fc7dd22-9ce5-4e6a-b17e-a43a0ed54910" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/1288dc14-8e2e-4f7d-9677-0b9d7e8a2560" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/298690fb-a405-466d-88d2-1d9a97345639" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/b71285a6-d419-4211-98f5-d22928446fe6" width="160" />
+<img src="https://github.com/xramos/BusTrip/assets/1492227/25f82887-a539-4a1e-abdc-931a979c8edc" width="160" />
 
 # Front End Problem Description
 You are asked to build a simple trip manager for our bus on demand solution. This tool will be used by the operators of the service in order to see the trips available in the system. The problem has four tasks and you should solve each one before the next.
