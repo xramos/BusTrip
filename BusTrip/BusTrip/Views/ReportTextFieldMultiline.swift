@@ -16,7 +16,7 @@ struct ReportTextFieldMultiline: View {
     
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: Constants.padding) {
             
             Text(placeholder)
                 .fontWeight(.bold)

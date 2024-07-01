@@ -59,7 +59,7 @@ extension TripListView {
         VStack {
             
             Map(position: $position,
-                interactionModes: [.rotate, .pan, .zoom],
+                interactionModes: [.rotate, .pan, .pitch, .zoom],
                 selection: $viewModel.selectedStopId) {
                 
                 if let selectedTrip = viewModel.selectedTrip {
@@ -154,7 +154,7 @@ extension TripListView {
             ZStack {
                 
                 Circle()
-                    .fill(Color.surface.opacity(0.5))
+                    .fill(Color.surface.opacity(Constants.opacity))
                     .frame(width: Constants.annotationHeight,
                            height: Constants.annotationHeight)
                 
