@@ -118,6 +118,90 @@ extension TripRepositoryImplementationUnitTests {
     }
 }
 
+// MARK: - Get Stop Detail
+
+extension TripRepositoryImplementationUnitTests {
+ 
+    func testGetStopDetailOK() {
+        
+        // Given
+        let stopId = 1
+        let session = getStopDetailSession(statusCode: successStatusCode, stopId: stopId)
+        
+        let remote = RemoteTripDataSource(baseURLString: baseUrlString,
+                                          session: session)
+        
+        sut = TripRepositoryImplementation(remoteDataSource: remote)
+        
+        let exp = expectation(description: "expected trip values")
+        
+        // When
+        cancellable = sut!.getStopDetail(stopId: stopId)
+            .sink(receiveCompletion: { completion in
+                
+                switch completion {
+                case .finished:
+                    exp.fulfill()
+                case .failure:
+                    break
+                }
+                
+            }, receiveValue: { stopDetail in
+                
+                XCTAssertNotNil(stopDetail)
+                
+                XCTAssertEqual(stopDetail.id, stopId)
+                XCTAssertEqual(stopDetail.userName, "Bruce Wayne")
+                XCTAssertEqual(stopDetail.address, "Gotham")
+                XCTAssertEqual(stopDetail.stopTime, "2018-12-18T08:00:00.000Z")
+                XCTAssertEqual(stopDetail.price, 2.5)
+                XCTAssertEqual(stopDetail.paid, true)
+                XCTAssertEqual(stopDetail.lat, 41.3)
+                XCTAssertEqual(stopDetail.lon, 2.189)
+            })
+        
+        wait(for: [exp], timeout: timeoutTime)
+        
+        // Then
+        XCTAssertNotNil(cancellable)
+    }
+    
+    func testGetStopDetailKO() {
+     
+        // Given
+        let stopId = 1
+        let session = getStopDetailSession(statusCode: failureStatusCode, stopId: stopId)
+        
+        let remote = RemoteTripDataSource(baseURLString: baseUrlString,
+                                          session: session)
+        
+        sut = TripRepositoryImplementation(remoteDataSource: remote)
+        
+        let exp = expectation(description: "expected trip values")
+        
+        // When
+        cancellable = sut!.getStopDetail(stopId: stopId)
+            .sink(receiveCompletion: { completion in
+                
+                switch completion {
+                case .finished:
+                    break
+                case .failure:
+                    exp.fulfill()
+                }
+                
+            }, receiveValue: { _ in
+                
+                // Nothing to do
+            })
+        
+        wait(for: [exp], timeout: timeoutTime)
+        
+        // Then
+        XCTAssertNotNil(cancellable)
+    }
+}
+
 // MARK: - Session
 
 fileprivate extension TripRepositoryImplementationUnitTests {
@@ -128,7 +212,7 @@ fileprivate extension TripRepositoryImplementationUnitTests {
         let url = URL(string: "\(baseUrlString)/tech-test/trips.json")
         
         // data we expect to receive
-        let data = getTripsdata()
+        let data = getTripsData()
         
         // attach that to some fixed data in our protocol handler
         URLProtocolMock.testURLs = [url: data]
@@ -147,7 +231,32 @@ fileprivate extension TripRepositoryImplementationUnitTests {
         return session
     }
     
-    func getTripsdata() -> Data {
+    func getStopDetailSession(statusCode: Int, stopId: Int) -> URLSession {
+        
+        // URL we expect to call
+        let url = URL(string: "\(baseUrlString)/tech-test/stops.json")
+        
+        // data we expect to receive
+        let data = getStopDetailData(stopId: stopId)
+        
+        // attach that to some fixed data in our protocol handler
+        URLProtocolMock.testURLs = [url: data]
+        URLProtocolMock.response = HTTPURLResponse(url: URL(string: "http://jsonplaceholder.typicode.com:8080")!,
+                                                   statusCode: statusCode,
+                                                   httpVersion: nil,
+                                                   headerFields: nil)
+        
+        // now setup a configuration to use our mock
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [URLProtocolMock.self]
+        
+        // and ceate the URLSession form that
+        let session = URLSession(configuration: config)
+        
+        return session
+    }
+    
+    func getTripsData() -> Data {
         
         let dataString = """
                                      [{
@@ -173,6 +282,26 @@ fileprivate extension TripRepositoryImplementationUnitTests {
                                         },
                                         "stops": []
                                     }]
+                        """
+        
+        return Data(dataString.utf8)
+    }
+    
+    func getStopDetailData(stopId: Int) -> Data {
+        
+        let dataString = """
+                                     {
+                                        "tripId": 1,
+                                        "userName": "Bruce Wayne",
+                                        "address": "Gotham",
+                                        "stopTime": "2018-12-18T08:00:00.000Z",
+                                        "price": 2.5,
+                                        "paid": true,
+                                        "point":  {
+                                            "_latitude": 41.3,
+                                            "_longitude": 2.189
+                                        }
+                                    }
                         """
         
         return Data(dataString.utf8)

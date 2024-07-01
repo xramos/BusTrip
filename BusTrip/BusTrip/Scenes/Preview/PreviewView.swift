@@ -14,7 +14,7 @@ struct PreviewView: View {
        
         VStack {
             
-            if let image = UIImage(named: "BusIcon") {
+            if let image = UIImage(named: Constants.previewImage) {
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)

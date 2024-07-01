@@ -44,6 +44,16 @@ extension TripRepositoryImplementation: TripRepository {
         .eraseToAnyPublisher()
     }
     
+    func getStopDetail(stopId: Int) -> AnyPublisher<StopDetail, Error> {
+        
+        return remoteDataSource.getStopDetail(stopId: stopId).map { serverStopDetail in
+            
+            return serverStopDetail.convertToEntity()
+        }
+        .mapError({ $0 })
+        .eraseToAnyPublisher()
+    }
+    
     func getReports() -> [Report] {
         
         return localDataSource.getReports()

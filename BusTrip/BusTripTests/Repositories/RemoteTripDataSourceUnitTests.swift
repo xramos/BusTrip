@@ -35,4 +35,17 @@ final class RemoteTripDataSourceUnitTests: XCTestCase {
         XCTAssertNotNil(response)
         XCTAssertEqual(response.url?.absoluteString, "http://jsonplaceholder.typicode.com/tech-test/trips.json")
     }
+    
+    func testGetStopDetailEndpoint() {
+        
+        // Given
+        let request = 1
+        
+        // When
+        let response = sut!.makeGetStopDetail(stopId: request)
+        
+        // Then
+        XCTAssertNotNil(response)
+        XCTAssertEqual(response.url?.absoluteString, "http://jsonplaceholder.typicode.com/tech-test/stops.json")
+    }
 }

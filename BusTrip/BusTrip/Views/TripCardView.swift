@@ -30,7 +30,7 @@ struct TripCardView: View {
                             .frame(height: Constants.iconHeight)
                             .foregroundColor(Color.secondary)
                         
-                        Text(trip.formatTime(date: trip.endTime) ?? "")
+                        Text(trip.endTime.formatTime() ?? "")
                             .font(.footnote)
                     }
                 }

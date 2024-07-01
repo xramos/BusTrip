@@ -17,16 +17,19 @@ class TripListViewModel: ObservableObject {
     
     @Published var trips: [Trip] = []
     @Published var selectedTrip: Trip?
+    @Published var selectedStopId: Int?
+    @Published var selectedStop: StopDetail?
     
     // Cancellables
     
-    private var cancellable: AnyCancellable?
+    private var getTripsCancellable: AnyCancellable?
+    private var getStopDetailCancellable: AnyCancellable?
     
     // MARK: - Methods
     
     func getTrips() {
         
-        cancellable = GetTripsUseCase().execute()
+        getTripsCancellable = GetTripsUseCase().execute()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 
@@ -40,8 +43,42 @@ class TripListViewModel: ObservableObject {
             }, receiveValue: { (trips: [Trip]) in
                 self.trips = trips
                 if let trip = trips.first {
-                    self.setSelectedTrip(trip: trip)
+                    self.selectedTrip = trip
                 }
+            })
+    }
+    
+    func selectStopDetail(stopId: Int) {
+        
+        if stopId == selectedStopId {
+            
+            // If already selected deselect it
+            self.selectedStopId = nil
+            self.selectedStop = nil
+            
+        } else {
+            
+            getStopDetail(stopId: stopId)
+        }
+    }
+    
+    func getStopDetail(stopId: Int) {
+        
+        getStopDetailCancellable = GetStopDetailUseCase().execute(stopId: stopId)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
+                }
+                
+            }, receiveValue: { (stopDetail: StopDetail) in
+                
+                self.selectedStopId = stopId
+                self.selectedStop = stopDetail
             })
     }
     
@@ -53,6 +90,11 @@ class TripListViewModel: ObservableObject {
     func setSelectedTrip(trip: Trip) {
         
         selectedTrip = trip
+    }
+    
+    func isSelected(stop: Stop) -> Bool {
+        
+        return stop.id == selectedStop?.id
     }
     
     func getTripRoute(trip: Trip) -> [CLLocationCoordinate2D]? {

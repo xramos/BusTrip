@@ -106,7 +106,7 @@ struct ReportDatePicker_Previews: PreviewProvider {
         ], configure: { state in
             
             ReportDatePicker(placeholder: "Report date:",
-                             date: .constant(Date()),
+                             date: .constant(DateFormatter.iso8601Full.date(from: "2018-12-18T08:00:00.000Z")!),
                              minimumDate: Date(),
                              maximumDate: Date())
         })
