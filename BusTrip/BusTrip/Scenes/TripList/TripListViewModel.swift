@@ -17,6 +17,7 @@ class TripListViewModel: ObservableObject {
     
     @Published var trips: [Trip] = []
     @Published var selectedTrip: Trip?
+    @Published var selectedStopId: Int?
     @Published var selectedStop: StopDetail?
     
     // Cancellables
@@ -47,6 +48,20 @@ class TripListViewModel: ObservableObject {
             })
     }
     
+    func selectStopDetail(stopId: Int) {
+        
+        if stopId == selectedStopId {
+            
+            // If already selected deselect it
+            self.selectedStopId = nil
+            self.selectedStop = nil
+            
+        } else {
+            
+            getStopDetail(stopId: stopId)
+        }
+    }
+    
     func getStopDetail(stopId: Int) {
         
         getStopDetailCancellable = GetStopDetailUseCase().execute(stopId: stopId)
@@ -62,6 +77,7 @@ class TripListViewModel: ObservableObject {
                 
             }, receiveValue: { (stopDetail: StopDetail) in
                 
+                self.selectedStopId = stopId
                 self.selectedStop = stopDetail
             })
     }

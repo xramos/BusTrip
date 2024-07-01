@@ -19,7 +19,7 @@ struct StopInfoView: View {
             VStack(alignment: .leading) {
                 
                 Text(stop.address)
-                    .font(.headline)
+                    .font(.caption)
                 
                 HStack {
                     
@@ -28,11 +28,11 @@ struct StopInfoView: View {
                         .foregroundColor(Color.secondary)
                     
                     Text(stop.stopTime.formatTime() ?? "")
-                        .font(.footnote)
+                        .font(.caption2)
                 }
             }
             .padding(Constants.padding)
-            .background(Color.surface)
+            .background(Color.surfaceSelected)
                    .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius, style: .continuous))
         }
     }

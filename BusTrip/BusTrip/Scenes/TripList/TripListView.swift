@@ -59,7 +59,8 @@ extension TripListView {
         VStack {
             
             Map(position: $position,
-                interactionModes: [.rotate, .pan, .zoom]) {
+                interactionModes: [.rotate, .pan, .zoom],
+                selection: $viewModel.selectedStopId) {
                 
                 if let selectedTrip = viewModel.selectedTrip {
                     
@@ -75,8 +76,10 @@ extension TripListView {
                                    anchor: .top) {
                             
                             annotationView(stop: stop)
+                                .tag(stop.id)
                                 .onTapGesture {
-                                    viewModel.getStopDetail(stopId: stop.id)
+                                    
+                                    viewModel.selectStopDetail(stopId: stop.id)
                                 }
                         }
                     }
@@ -148,23 +151,24 @@ extension TripListView {
         
         VStack(alignment: .center) {
             
-            if viewModel.isSelected(stop: stop) {
-                
-                Text(viewModel.selectedStop?.address ?? "")
-            }
-                  
             ZStack {
                 
                 Circle()
                     .fill(Color.surface.opacity(0.5))
-                    .frame(width: Constants.annotationHeight, 
+                    .frame(width: Constants.annotationHeight,
                            height: Constants.annotationHeight)
                 
                 Image(systemName: Constants.annotationImage)
                     .padding(Constants.padding)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(Color.surfaceSelected)
                     .background(Color.surface)
                     .clipShape(Circle())
+            }
+            
+            if viewModel.selectedStopId == stop.id,
+                let selectedStop = viewModel.selectedStop {
+                
+                StopInfoView(stop: selectedStop)
             }
         }
     }
