@@ -7,17 +7,7 @@
 
 import Foundation
 
-class SaveReportUseCase {
+protocol SaveReportUseCase {
     
-    private let repository: TripRepository
-    
-    init(repository: TripRepository = TripRepositoryImplementation()) {
-        
-        self.repository = repository
-    }
-    
-    func execute(report: Report) {
-        
-        repository.saveReport(report: report)
-    }
+    func execute(report: Report)
 }

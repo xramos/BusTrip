@@ -12,6 +12,8 @@ import Combine
 class ReportViewModel: ObservableObject {
  
     // Values
+    let saveReportUseCase: SaveReportUseCase
+    let getReportsUseCase: GetReportsUseCase
     
     @Published var nameInput = ""
     @Published var surnameInput = ""
@@ -33,7 +35,11 @@ class ReportViewModel: ObservableObject {
     
     // MARK: - Methods
     
-    init() {
+    init(saveReportUseCase: SaveReportUseCase = SaveReportUseCaseImplementation(),
+         getReportsUseCase: GetReportsUseCase = GetReportsUseCaseImplementation()) {
+        
+        self.saveReportUseCase = saveReportUseCase
+        self.getReportsUseCase = getReportsUseCase
         
         let currentDate = Date()
         date = currentDate
@@ -70,10 +76,10 @@ class ReportViewModel: ObservableObject {
                             reportTime: dateString,
                             reportDescription: reportDescription)
         
-        SaveReportUseCase().execute(report: report)
+        saveReportUseCase.execute(report: report)
         
         // Update badge number
-        let reports = GetReportsUseCase().execute()
+        let reports = getReportsUseCase.execute()
         UNUserNotificationCenter.current().setBadgeCount(reports.count)
         
         reportSaved = true

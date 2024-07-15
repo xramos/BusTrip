@@ -68,9 +68,9 @@
 		DAAEEF3A2C30010B00181ECD /* DBPhoneUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF392C30010B00181ECD /* DBPhoneUnitTests.swift */; };
 		DAAEEF3C2C30035D00181ECD /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3B2C30035D00181ECD /* LocalDataSource.swift */; };
 		DAAEEF3E2C3003FA00181ECD /* SaveReportUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */; };
-		DAAEEF402C30045700181ECD /* SaveReportUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */; };
+		DAAEEF402C30045700181ECD /* SaveReportUseCaseImplementationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF3F2C30045700181ECD /* SaveReportUseCaseImplementationUnitTests.swift */; };
 		DAAEEF422C30086F00181ECD /* GetReportsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */; };
-		DAAEEF442C30092300181ECD /* GetReportsUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */; };
+		DAAEEF442C30092300181ECD /* GetReportsUseCaseImplementationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF432C30092300181ECD /* GetReportsUseCaseImplementationUnitTests.swift */; };
 		DAAEEF462C300B2000181ECD /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF452C300B2000181ECD /* ReportView.swift */; };
 		DAAEEF4A2C30107300181ECD /* ReportTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF492C30107300181ECD /* ReportTextField.swift */; };
 		DAAEEF4C2C30189F00181ECD /* ReportTextFieldMultiline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */; };
@@ -92,6 +92,10 @@
 		DACB36BB2C4559E700BC6264 /* GetStopDetailUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36BA2C4559E700BC6264 /* GetStopDetailUseCaseImplementation.swift */; };
 		DACB36BD2C455A7000BC6264 /* MockGetTripsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36BC2C455A7000BC6264 /* MockGetTripsUseCase.swift */; };
 		DACB36BF2C455ACC00BC6264 /* MockGetStopDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36BE2C455ACC00BC6264 /* MockGetStopDetailUseCase.swift */; };
+		DACB36C12C455CF500BC6264 /* SaveReportUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36C02C455CF500BC6264 /* SaveReportUseCaseImplementation.swift */; };
+		DACB36C32C455D3500BC6264 /* GetReportsUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36C22C455D3500BC6264 /* GetReportsUseCaseImplementation.swift */; };
+		DACB36C52C455DF800BC6264 /* MockSaveReportUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36C42C455DF800BC6264 /* MockSaveReportUseCase.swift */; };
+		DACB36C72C455E3100BC6264 /* MockGetReportsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36C62C455E3100BC6264 /* MockGetReportsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,9 +171,9 @@
 		DAAEEF392C30010B00181ECD /* DBPhoneUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhoneUnitTests.swift; sourceTree = "<group>"; };
 		DAAEEF3B2C30035D00181ECD /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		DAAEEF3D2C3003FA00181ECD /* SaveReportUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCase.swift; sourceTree = "<group>"; };
-		DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCaseUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF3F2C30045700181ECD /* SaveReportUseCaseImplementationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCaseImplementationUnitTests.swift; sourceTree = "<group>"; };
 		DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCase.swift; sourceTree = "<group>"; };
-		DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCaseUnitTests.swift; sourceTree = "<group>"; };
+		DAAEEF432C30092300181ECD /* GetReportsUseCaseImplementationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCaseImplementationUnitTests.swift; sourceTree = "<group>"; };
 		DAAEEF452C300B2000181ECD /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		DAAEEF492C30107300181ECD /* ReportTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextField.swift; sourceTree = "<group>"; };
 		DAAEEF4B2C30189F00181ECD /* ReportTextFieldMultiline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTextFieldMultiline.swift; sourceTree = "<group>"; };
@@ -190,6 +194,10 @@
 		DACB36BA2C4559E700BC6264 /* GetStopDetailUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopDetailUseCaseImplementation.swift; sourceTree = "<group>"; };
 		DACB36BC2C455A7000BC6264 /* MockGetTripsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetTripsUseCase.swift; sourceTree = "<group>"; };
 		DACB36BE2C455ACC00BC6264 /* MockGetStopDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetStopDetailUseCase.swift; sourceTree = "<group>"; };
+		DACB36C02C455CF500BC6264 /* SaveReportUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportUseCaseImplementation.swift; sourceTree = "<group>"; };
+		DACB36C22C455D3500BC6264 /* GetReportsUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportsUseCaseImplementation.swift; sourceTree = "<group>"; };
+		DACB36C42C455DF800BC6264 /* MockSaveReportUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSaveReportUseCase.swift; sourceTree = "<group>"; };
+		DACB36C62C455E3100BC6264 /* MockGetReportsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetReportsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +370,8 @@
 				DAAEEF342C2FFF6D00181ECD /* ReportMock.swift */,
 				DACB36BC2C455A7000BC6264 /* MockGetTripsUseCase.swift */,
 				DACB36BE2C455ACC00BC6264 /* MockGetStopDetailUseCase.swift */,
+				DACB36C42C455DF800BC6264 /* MockSaveReportUseCase.swift */,
+				DACB36C62C455E3100BC6264 /* MockGetReportsUseCase.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -403,6 +413,8 @@
 				DAAEEF412C30086F00181ECD /* GetReportsUseCase.swift */,
 				DACB36B82C45594600BC6264 /* GetTripsUseCaseImplementation.swift */,
 				DACB36BA2C4559E700BC6264 /* GetStopDetailUseCaseImplementation.swift */,
+				DACB36C02C455CF500BC6264 /* SaveReportUseCaseImplementation.swift */,
+				DACB36C22C455D3500BC6264 /* GetReportsUseCaseImplementation.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -412,8 +424,8 @@
 			children = (
 				DAAEEF6C2C31E4DE00181ECD /* GetStopDetailUseCaseImplementationUnitTests.swift */,
 				DAADE9D92C2C56C800B1FA5B /* GetTripsUseCaseImplementationUnitTests.swift */,
-				DAAEEF3F2C30045700181ECD /* SaveReportUseCaseUnitTests.swift */,
-				DAAEEF432C30092300181ECD /* GetReportsUseCaseUnitTests.swift */,
+				DAAEEF3F2C30045700181ECD /* SaveReportUseCaseImplementationUnitTests.swift */,
+				DAAEEF432C30092300181ECD /* GetReportsUseCaseImplementationUnitTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -680,6 +692,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACB36C12C455CF500BC6264 /* SaveReportUseCaseImplementation.swift in Sources */,
+				DACB36C32C455D3500BC6264 /* GetReportsUseCaseImplementation.swift in Sources */,
 				DAAEEF1D2C2F10ED00181ECD /* ReportViewModel.swift in Sources */,
 				DAAEEF4E2C30226300181ECD /* ReportDatePicker.swift in Sources */,
 				DAADE9D52C2C55FF00B1FA5B /* GetTripsUseCase.swift in Sources */,
@@ -748,17 +762,19 @@
 				DAADE9BB2C2C1C1C00B1FA5B /* TripUnitTests.swift in Sources */,
 				DAADE9B12C2C171B00B1FA5B /* ServerPointUnitTests.swift in Sources */,
 				DAADE9A52C2C062600B1FA5B /* PointMock.swift in Sources */,
-				DAAEEF402C30045700181ECD /* SaveReportUseCaseUnitTests.swift in Sources */,
+				DAAEEF402C30045700181ECD /* SaveReportUseCaseImplementationUnitTests.swift in Sources */,
 				DAADE9DA2C2C56C800B1FA5B /* GetTripsUseCaseImplementationUnitTests.swift in Sources */,
 				DAAEEF332C2FFE3B00181ECD /* DBManagerUnitTests.swift in Sources */,
 				DACB36BF2C455ACC00BC6264 /* MockGetStopDetailUseCase.swift in Sources */,
+				DACB36C52C455DF800BC6264 /* MockSaveReportUseCase.swift in Sources */,
 				DAADE9B92C2C1BA100B1FA5B /* StopUnitTests.swift in Sources */,
 				DAAEEF562C31C2C400181ECD /* ReportTextFieldMultilineSnapshotTests.swift in Sources */,
 				DAAEEF5B2C31C4D500181ECD /* ReportViewModelUnitTests.swift in Sources */,
-				DAAEEF442C30092300181ECD /* GetReportsUseCaseUnitTests.swift in Sources */,
+				DAAEEF442C30092300181ECD /* GetReportsUseCaseImplementationUnitTests.swift in Sources */,
 				DAAEEF312C2FFE0000181ECD /* TestCoreDataStack.swift in Sources */,
 				DAADE9CB2C2C2A3700B1FA5B /* URLProtocolMock.swift in Sources */,
 				DAADE9A92C2C083000B1FA5B /* AddressMock.swift in Sources */,
+				DACB36C72C455E3100BC6264 /* MockGetReportsUseCase.swift in Sources */,
 				DAADE9D72C2C565D00B1FA5B /* MockTripRepository.swift in Sources */,
 				DAAEEF582C31C2D200181ECD /* ReportDatePickerSnapshotTests.swift in Sources */,
 				DAADEA052C2D955200B1FA5B /* TripCardViewSnapshotTests.swift in Sources */,

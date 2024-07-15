@@ -77,4 +77,20 @@ final class ReportViewModelUnitTests: XCTestCase {
         XCTAssertNotNil(response)
         XCTAssertTrue(response!)
     }
+    
+    func testUseCasesCalled() {
+        
+        // Given
+        let saveReportUseCase = MockSaveReportUseCase()
+        let getReportsUseCase = MockGetReportsUseCase()
+        sut = ReportViewModel(saveReportUseCase: saveReportUseCase,
+                              getReportsUseCase: getReportsUseCase)
+        
+        // When
+        sut?.saveReport()
+        
+        // Then
+        XCTAssertTrue(saveReportUseCase.isExecuteCalled)
+        XCTAssertTrue(getReportsUseCase.isExecuteCalled)
+    }
 }
