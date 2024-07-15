@@ -80,4 +80,30 @@ final class TripListViewModelUnitTests: XCTestCase {
         // Then
         XCTAssertNil(response)
     }
+    
+    func testGetTripsCalled() {
+        
+        // Given
+        let useCase = MockGetTripsUseCase()
+        sut = TripListViewModel(getTripsUseCase: useCase)
+        
+        // When
+        sut?.getTrips()
+        
+        // Then
+        XCTAssertTrue(useCase.isExecuteCalled)
+    }
+    
+    func testGetStopDetailCalled() {
+        
+        // Given
+        let useCase = MockGetStopDetailUseCase()
+        sut = TripListViewModel(getStopDetailUseCase: useCase)
+        
+        // When
+        sut?.getStopDetail(stopId: 1)
+        
+        // Then
+        XCTAssertTrue(useCase.isExecuteCalled)
+    }
 }

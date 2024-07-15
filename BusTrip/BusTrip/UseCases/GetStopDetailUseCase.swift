@@ -8,17 +8,7 @@
 import Foundation
 import Combine
 
-class GetStopDetailUseCase {
+protocol GetStopDetailUseCase {
     
-    private let repository: TripRepository
-    
-    init(repository: TripRepository = TripRepositoryImplementation()) {
-        
-        self.repository = repository
-    }
-    
-    func execute(stopId: Int) -> AnyPublisher<StopDetail, Error> {
-        
-        return repository.getStopDetail(stopId: stopId)
-    }
+    func execute(stopId: Int) -> AnyPublisher<StopDetail, Error>
 }

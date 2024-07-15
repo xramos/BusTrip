@@ -30,7 +30,6 @@ class MockTripRepository: TripRepository {
         
         // We don't care about the return result
         return Result.Publisher(NetworkError.invalidResponse).eraseToAnyPublisher()
-        
     }
     
     @discardableResult func getReports() -> [Report] {

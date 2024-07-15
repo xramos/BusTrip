@@ -1,5 +1,5 @@
 //
-//  GetStopDetailUseCaseUnitTests.swift
+//  GetStopDetailUseCaseImplementationUnitTests.swift
 //  BusTripTests
 //
 //  Created by Xavier Ramos on 27/6/24.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import BusTrip
 
-final class GetStopDetailUseCaseUnitTests: XCTestCase {
+final class GetStopDetailUseCaseImplementationUnitTests: XCTestCase {
 
     var sut: GetStopDetailUseCase?
 
@@ -24,7 +24,7 @@ final class GetStopDetailUseCaseUnitTests: XCTestCase {
         // Given
         let stopId = 1
         let repository = MockTripRepository()
-        sut = GetStopDetailUseCase(repository: repository)
+        sut = GetStopDetailUseCaseImplementation(repository: repository)
         
         // When
         _ = sut!.execute(stopId: stopId)

@@ -8,17 +8,7 @@
 import Foundation
 import Combine
 
-class GetTripsUseCase {
+protocol GetTripsUseCase {
     
-    private let repository: TripRepository
-    
-    init(repository: TripRepository = TripRepositoryImplementation()) {
-        
-        self.repository = repository
-    }
-    
-    func execute() -> AnyPublisher<[Trip], Error> {
-        
-        return repository.getTrips()
-    }
+    func execute() -> AnyPublisher<[Trip], Error>
 }

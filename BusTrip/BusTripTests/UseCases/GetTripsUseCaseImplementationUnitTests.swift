@@ -1,5 +1,5 @@
 //
-//  GetTripsUseCaseUnitTests.swift
+//  GetTripsUseCaseImplementationUnitTests.swift
 //  BusTripTests
 //
 //  Created by Xavier Ramos on 26/6/24.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import BusTrip
 
-final class GetTripsUseCaseUnitTests: XCTestCase {
+final class GetTripsUseCaseImplementationUnitTests: XCTestCase {
 
     var sut: GetTripsUseCase?
     
@@ -23,7 +23,7 @@ final class GetTripsUseCaseUnitTests: XCTestCase {
         
         // Given
         let repository = MockTripRepository()
-        sut = GetTripsUseCase(repository: repository)
+        sut = GetTripsUseCaseImplementation(repository: repository)
         
         // When
         _ = sut!.execute()

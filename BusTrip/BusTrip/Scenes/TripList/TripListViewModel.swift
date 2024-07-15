@@ -15,6 +15,9 @@ class TripListViewModel: ObservableObject {
     
     // Values
     
+    let getTripsUseCase: GetTripsUseCase
+    let getStopDetailUseCase: GetStopDetailUseCase
+    
     @Published var trips: [Trip] = []
     @Published var selectedTrip: Trip?
     @Published var selectedStopId: Int?
@@ -27,9 +30,16 @@ class TripListViewModel: ObservableObject {
     
     // MARK: - Methods
     
+    init(getTripsUseCase: GetTripsUseCase = GetTripsUseCaseImplementation(),
+         getStopDetailUseCase: GetStopDetailUseCase = GetStopDetailUseCaseImplementation()) {
+        
+        self.getTripsUseCase = getTripsUseCase
+        self.getStopDetailUseCase = getStopDetailUseCase
+    }
+    
     func getTrips() {
         
-        getTripsCancellable = GetTripsUseCase().execute()
+        getTripsCancellable = getTripsUseCase.execute()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 
@@ -64,7 +74,7 @@ class TripListViewModel: ObservableObject {
     
     func getStopDetail(stopId: Int) {
         
-        getStopDetailCancellable = GetStopDetailUseCase().execute(stopId: stopId)
+        getStopDetailCancellable = getStopDetailUseCase.execute(stopId: stopId)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 
